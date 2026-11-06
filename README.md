@@ -41,8 +41,8 @@ Before diving into code, review the complete architectural and operational speci
 
 ## 🌐 Live Deployments & URLs
 
-- **Public Live Website:** [https://kalakriti-thrissur.loca.lt](https://kalakriti-thrissur.loca.lt)
-- **Admin Moderation Console:** [https://kalakriti-thrissur.loca.lt/#admin](https://kalakriti-thrissur.loca.lt/#admin)
+- **Public Live Website:** [https://wise-kangaroo-63.loca.lt](https://wise-kangaroo-63.loca.lt)
+- **Admin Moderation Console:** [https://wise-kangaroo-63.loca.lt/#admin](https://wise-kangaroo-63.loca.lt/#admin)
 - **Vercel Cloud Deployment & Claim URL:** [https://vercel.com/claim-deployment?code=61a9c272-127f-4886-bbf3-c2dd96a6083e](https://vercel.com/claim-deployment?code=61a9c272-127f-4886-bbf3-c2dd96a6083e)
   *(Claim this temporary deployment directly to your Vercel account with 1 click to obtain your permanent `kalakriti.vercel.app` domain).*
 
