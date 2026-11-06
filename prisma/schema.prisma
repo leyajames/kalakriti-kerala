@@ -1,0 +1,260 @@
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [postgis, pg_trgm, unaccent, uuid_ossp(map: "uuid-ossp")]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+enum UserRole {
+  EXPLORER
+  ARTIST
+  ORGANIZER
+  CURATOR
+  ADMIN
+}
+
+enum VerificationTier {
+  UNVERIFIED
+  UNDER_REVIEW
+  VERIFIED_MASTER
+  HERITAGE_GUILD
+}
+
+enum ArtformCategory {
+  PERFORMING_CLASSICAL
+  PERCUSSION_MELAM
+  FOLK_RITUAL
+  CRAFT_SCULPTURE
+  HANDLOOM_TEXTILE
+  THEATRE_LITERATURE
+}
+
+model User {
+  id                String              @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  email             String?             @unique @db.VarChar(255)
+  phoneNumber       String?             @unique @map("phone_number") @db.VarChar(20)
+  name              String              @db.VarChar(150)
+  avatarUrl         String?             @map("avatar_url") @db.Text
+  role              UserRole            @default(EXPLORER)
+  preferredLanguage String              @default("ml") @map("preferred_language") @db.VarChar(5)
+  isVerified        Boolean             @default(false) @map("is_verified")
+  createdAt         DateTime            @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt         DateTime            @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  artistProfile     ArtistProfile?
+  organizedEvents   CulturalEvent[]
+  inquiriesSent     InquiryCommission[] @relation("SenderInquiries")
+  moderationsDone   ModerationQueue[]   @relation("CuratorReviews")
+  moderationsSent   ModerationQueue[]   @relation("UserSubmissions")
+  auditLogs         AuditLog[]
+
+  @@map("users")
+}
+
+model ArtistProfile {
+  id                     String           @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  userId                 String           @unique @map("user_id") @db.Uuid
+  stageName              String?          @map("stage_name") @db.VarChar(150)
+  bioEn                  String?          @map("bio_en") @db.Text
+  bioMl                  String?          @map("bio_ml") @db.Text
+  primaryArtformId       String           @map("primary_artform_id") @db.Uuid
+  guruLineage            String?          @map("guru_lineage") @db.Text
+  experienceYears        Int              @default(1) @map("experience_years")
+  studioName             String?          @map("studio_name") @db.VarChar(200)
+  studioAddress          String?          @map("studio_address") @db.Text
+  taluk                  String           @default("Thrissur") @db.VarChar(50)
+  contactPhone           String?          @map("contact_phone") @db.VarChar(20)
+  whatsappNumber         String?          @map("whatsapp_number") @db.VarChar(20)
+  isAcceptingCommissions Boolean          @default(true) @map("is_accepting_commissions")
+  verificationTier       VerificationTier @default(UNVERIFIED) @map("verification_tier")
+  verifiedById           String?          @map("verified_by") @db.Uuid
+  verifiedAt             DateTime?        @map("verified_at") @db.Timestamptz(6)
+  createdAt              DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user                   User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  primaryArtform         Artform          @relation(fields: [primaryArtformId], references: [id])
+  artworks               ArtworkShowcase[]
+  workshops              Workshop[]
+  inquiriesReceived      InquiryCommission[]
+
+  @@map("artist_profiles")
+}
+
+model Artform {
+  id                 String          @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  slug               String          @unique @db.VarChar(100)
+  nameEn             String          @map("name_en") @db.VarChar(150)
+  nameMl             String          @map("name_ml") @db.VarChar(150)
+  category           ArtformCategory
+  descriptionEn      String          @map("description_en") @db.Text
+  descriptionMl      String          @map("description_ml") @db.Text
+  historyAndOrigin   String?         @map("history_and_origin") @db.Text
+  instrumentsUsed    String[]        @default([]) @map("instruments_used")
+  audioGuideUrl      String?         @map("audio_guide_url") @db.Text
+  coverImageUrl      String          @map("cover_image_url") @db.Text
+  isUnescoRecognized Boolean         @default(false) @map("is_unesco_recognized")
+  isGiTagged         Boolean         @default(false) @map("is_gi_tagged")
+  createdAt          DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  artists            ArtistProfile[]
+  artworks           ArtworkShowcase[]
+  events             CulturalEvent[]
+  workshops          Workshop[]
+
+  @@map("artforms")
+}
+
+model ArtworkShowcase {
+  id              String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  artistId        String   @map("artist_id") @db.Uuid
+  artformId       String   @map("artform_id") @db.Uuid
+  titleEn         String   @map("title_en") @db.VarChar(200)
+  titleMl         String?  @map("title_ml") @db.VarChar(200)
+  craftTechnique  String?  @map("craft_technique") @db.Text
+  medium          String?  @db.VarChar(100)
+  dimensions      String?  @db.VarChar(100)
+  yearCreated     Int?     @map("year_created")
+  mediaGallery    Json     @default("[]") @map("media_gallery")
+  videoEmbedUrl   String?  @map("video_embed_url") @db.Text
+  priceIndication String?  @map("price_indication") @db.VarChar(50)
+  isForSale       Boolean  @default(false) @map("is_for_sale")
+  status          String   @default("PUBLISHED") @db.VarChar(30)
+  viewsCount      Int      @default(0) @map("views_count")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  artist          ArtistProfile       @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  artform         Artform             @relation(fields: [artformId], references: [id])
+  inquiries       InquiryCommission[]
+
+  @@map("artworks_showcase")
+}
+
+model HeritageLocation {
+  id                  String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  slug                String   @unique @db.VarChar(120)
+  nameEn              String   @map("name_en") @db.VarChar(200)
+  nameMl              String   @map("name_ml") @db.VarChar(200)
+  category            String   @db.VarChar(50)
+  descriptionEn       String   @map("description_en") @db.Text
+  descriptionMl       String   @map("description_ml") @db.Text
+  architecturalStyle  String?  @map("architectural_style") @db.VarChar(100)
+  historicalEra       String?  @map("historical_era") @db.VarChar(100)
+  visitingHours       String   @map("visiting_hours") @db.VarChar(150)
+  entryRulesDressCode String?  @map("entry_rules_dress_code") @db.Text
+  address             String   @db.Text
+  taluk               String   @db.VarChar(50)
+  galleryUrls         String[] @default([]) @map("gallery_urls")
+  audioGuideUrl       String?  @map("audio_guide_url") @db.Text
+  isVerified          Boolean  @default(true) @map("is_verified")
+  createdAt           DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  events              CulturalEvent[]
+
+  @@map("heritage_locations")
+}
+
+model CulturalEvent {
+  id                 String            @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  organizerId        String            @map("organizer_id") @db.Uuid
+  titleEn            String            @map("title_en") @db.VarChar(250)
+  titleMl            String            @map("title_ml") @db.VarChar(250)
+  slug               String            @unique @db.VarChar(150)
+  description        String            @db.Text
+  artformId          String?           @map("artform_id") @db.Uuid
+  heritageLocationId String?           @map("heritage_location_id") @db.Uuid
+  venueName          String            @map("venue_name") @db.VarChar(200)
+  startTime          DateTime          @map("start_time") @db.Timestamptz(6)
+  endTime            DateTime          @map("end_time") @db.Timestamptz(6)
+  malayalamMonth     String?           @map("malayalam_month") @db.VarChar(50)
+  malayalamStar      String?           @map("malayalam_star") @db.VarChar(50)
+  ensembleLineup     Json              @default("[]") @map("ensemble_lineup")
+  bannerUrl          String            @map("banner_url") @db.Text
+  isFreeEntry        Boolean           @default(true) @map("is_free_entry")
+  registrationUrl    String?           @map("registration_url") @db.Text
+  status             String            @default("PUBLISHED") @db.VarChar(30)
+  createdAt          DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  organizer          User              @relation(fields: [organizerId], references: [id])
+  artform            Artform?          @relation(fields: [artformId], references: [id])
+  heritageLocation   HeritageLocation? @relation(fields: [heritageLocationId], references: [id])
+
+  @@map("cultural_events")
+}
+
+model Workshop {
+  id             String        @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  artistId       String        @map("artist_id") @db.Uuid
+  title          String        @db.VarChar(200)
+  artformId      String        @map("artform_id") @db.Uuid
+  description    String        @db.Text
+  skillLevel     String        @default("ALL_LEVELS") @map("skill_level") @db.VarChar(50)
+  maxSeats       Int           @default(15) @map("max_seats")
+  feeInr         Int           @default(0) @map("fee_inr")
+  startDate      DateTime      @map("start_date") @db.Timestamptz(6)
+  durationHours  Decimal       @default(2.5) @map("duration_hours") @db.Decimal(4, 1)
+  venueName      String        @map("venue_name") @db.VarChar(200)
+  status         String        @default("OPEN") @db.VarChar(30)
+  createdAt      DateTime      @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  artist         ArtistProfile @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  artform        Artform       @relation(fields: [artformId], references: [id])
+
+  @@map("workshops")
+}
+
+model InquiryCommission {
+  id            String           @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  senderId      String           @map("sender_id") @db.Uuid
+  artistId      String           @map("artist_id") @db.Uuid
+  artworkId     String?          @map("artwork_id") @db.Uuid
+  inquiryType   String           @default("COMMISSION") @map("inquiry_type") @db.VarChar(50)
+  message       String           @db.Text
+  budgetRange   String?          @map("budget_range") @db.VarChar(100)
+  senderContact String           @map("sender_contact") @db.VarChar(100)
+  status        String           @default("NEW") @db.VarChar(30)
+  createdAt     DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  sender        User             @relation("SenderInquiries", fields: [senderId], references: [id])
+  artist        ArtistProfile    @relation(fields: [artistId], references: [id])
+  artwork       ArtworkShowcase? @relation(fields: [artworkId], references: [id])
+
+  @@map("inquiries_commissions")
+}
+
+model ModerationQueue {
+  id             String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  entityType     String    @map("entity_type") @db.VarChar(50)
+  entityId       String    @map("entity_id") @db.Uuid
+  submittedById  String    @map("submitted_by") @db.Uuid
+  reviewedById   String?   @map("reviewed_by") @db.Uuid
+  status         String    @default("PENDING") @db.VarChar(30)
+  automatedFlags Json      @default("[]") @map("automated_flags")
+  curatorNotes   String?   @map("curator_notes") @db.Text
+  createdAt      DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  reviewedAt     DateTime? @map("reviewed_at") @db.Timestamptz(6)
+
+  submittedBy    User      @relation("UserSubmissions", fields: [submittedById], references: [id])
+  reviewedBy     User?     @relation("CuratorReviews", fields: [reviewedById], references: [id])
+
+  @@map("moderation_queue")
+}
+
+model AuditLog {
+  id          String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  actorId     String?  @map("actor_id") @db.Uuid
+  action      String   @db.VarChar(100)
+  targetTable String   @map("target_table") @db.VarChar(50)
+  targetId    String   @map("target_id") @db.Uuid
+  payload     Json?
+  ipAddress   String?  @map("ip_address") @db.VarChar(45)
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  actor       User?    @relation(fields: [actorId], references: [id])
+
+  @@map("audit_logs")
+}
+

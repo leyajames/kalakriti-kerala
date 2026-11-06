@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF7F0;
+    color: #432813;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Rozha One', 'Cinzel', serif;
+  }
+
+  .font-heading {
+    font-family: 'Marcellus', 'Cinzel', serif;
+  }
+
+  .font-malayalam {
+    font-family: 'Noto Serif Malayalam', 'Manjari', serif;
+  }
+}
+
+/* Custom Editorial Styling */
+.bg-parchment-texture {
+  background-color: #FAF7F0;
+  background-image: radial-gradient(#BB6D25 0.5px, transparent 0.5px), radial-gradient(#C98C4D 0.5px, #FAF7F0 0.5px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  background-opacity: 0.03;
+}
+
+.kasavu-gold-border {
+  border: 1px solid rgba(236, 202, 138, 0.5);
+  box-shadow: 0 0 15px rgba(236, 202, 138, 0.2);
+}
+
+.text-traditional-gradient {
+  background: linear-gradient(135deg, #A71903 0%, #BB6D25 50%, #432813 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Leaflet Map Custom Marker Styling & Subtle Pulsing Animation */
+@keyframes markerGlow {
+  0% {
+    box-shadow: 0 4px 12px rgba(67, 40, 19, 0.35), 0 0 0 0 rgba(236, 202, 138, 0.5);
+  }
+  100% {
+    box-shadow: 0 6px 16px rgba(67, 40, 19, 0.45), 0 0 0 10px rgba(236, 202, 138, 0);
+  }
+}
+
+.custom-cultural-marker > div,
+.custom-leaflet-marker > div {
+  animation: markerGlow 3s ease-in-out infinite;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.custom-cultural-marker:hover > div,
+.custom-leaflet-marker:hover > div {
+  transform: rotate(-45deg) scale(1.15) !important;
+}
+
+.cultural-marker-pin {
+  width: 36px;
+  height: 36px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border: 2px solid #ECCA8A;
+  animation: markerGlow 3s ease-in-out infinite;
+}
+
+.cultural-marker-pin span {
+  transform: rotate(45deg);
+  font-size: 16px;
+}
+
+/* Kerala Architectural Traditional Details */
+.kerala-kasavu-strip {
+  background: linear-gradient(90deg, #A71903 0%, #ECCA8A 35%, #BB6D25 70%, #432813 100%);
+}
+
+.kerala-mural-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(67, 40, 19, 0.08);
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth Scroll and Selection */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #C98C4D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BB6D25;
+}
+
