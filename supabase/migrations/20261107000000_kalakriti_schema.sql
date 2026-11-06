@@ -16,7 +16,7 @@ EXCEPTION
 END $$;
 
 DO $$ BEGIN
-  CREATE TYPE moderation_status AS ENUM ('pending', 'approved', 'rejected');
+  CREATE TYPE moderation_status AS ENUM ('pending', 'approved', 'rejected', 'needs_changes');
 EXCEPTION
   WHEN duplicate_object THEN null;
 END $$;

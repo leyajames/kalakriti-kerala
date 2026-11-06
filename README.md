@@ -39,6 +39,15 @@ Before diving into code, review the complete architectural and operational speci
 
 ---
 
+## 🌐 Live Deployments & URLs
+
+- **Public Live Website:** [https://kalakriti-thrissur.loca.lt](https://kalakriti-thrissur.loca.lt)
+- **Admin Moderation Console:** [https://kalakriti-thrissur.loca.lt/#admin](https://kalakriti-thrissur.loca.lt/#admin)
+- **Vercel Cloud Deployment & Claim URL:** [https://vercel.com/claim-deployment?code=61a9c272-127f-4886-bbf3-c2dd96a6083e](https://vercel.com/claim-deployment?code=61a9c272-127f-4886-bbf3-c2dd96a6083e)
+  *(Claim this temporary deployment directly to your Vercel account with 1 click to obtain your permanent `kalakriti.vercel.app` domain).*
+
+---
+
 ## 🛠️ Technology Stack
 
 - **Frontend & Fullstack:** Next.js 14+ (App Router, Server Components & Server Actions), React 18/19, TypeScript
@@ -123,6 +132,24 @@ In the **SQL Editor**, run `supabase/seed.sql`. This populates:
 - 6 Thrissur taluk hubs.
 - 6 Living master artist profiles with authentic lineages.
 - 15 Cultural listings covering heritage landmarks, craft clusters, and academies.
+
+#### Step C: Create Your First Admin Account
+You can configure an admin account using either of the two methods below:
+
+**Method 1: Direct SQL Elevation (Recommended for Production)**
+1. Sign up on KALAKRITI using the in-app **Login / Sign Up** modal with your email address (e.g. `admin@kalakriti.kerala.gov.in`).
+2. Run this quick query in the Supabase **SQL Editor**:
+```sql
+UPDATE public.profiles
+SET role = 'admin'
+WHERE id = (
+  SELECT id FROM auth.users WHERE email = 'admin@kalakriti.kerala.gov.in'
+);
+```
+
+**Method 2: In-App Demo Evaluator Mode (Instant)**
+1. Navigate to the Admin Console at [/#admin](https://kalakriti-thrissur.loca.lt/#admin).
+2. Click the gold **"Enter as Demo Admin"** button to log in instantly with the pre-seeded Chief Curator credentials (`admin@kalakriti.kerala.gov.in`).
 
 ---
 
