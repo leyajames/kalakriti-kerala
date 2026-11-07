@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useCultural } from '../context/CulturalContext';
 import { registerUser, loginUser, isSupabaseConfigured } from '../lib/supabase';
 import { UserRole } from '../lib/database.types';
@@ -36,6 +37,27 @@ export const AuthModal: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState(false);
   const [successText, setSuccessText] = useState('');
+
+  // Lock background scrolling and attach Escape key listener when modal is open
+  useEffect(() => {
+    if (!isAuthModalOpen) return;
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsAuthModalOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isAuthModalOpen, setIsAuthModalOpen]);
 
   if (!isAuthModalOpen) return null;
 
@@ -142,14 +164,28 @@ export const AuthModal: React.FC = () => {
     }
   };
 
-  return (
+  const modalContent = (
     <div 
       role="dialog"
       aria-modal="true"
       aria-labelledby="auth-modal-title"
-      className="fixed inset-0 z-70 overflow-y-auto bg-deep-brown/85 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn select-none"
+      className="fixed inset-0 z-[9999] overflow-y-auto flex items-center justify-center p-3 sm:p-4 select-none animate-fadeIn"
+      style={{ zIndex: 9999 }}
     >
-      <div className="relative w-full max-w-md bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6">
+      {/* 1. Full Viewport Backdrop covering underlying page */}
+      <div 
+        className="fixed inset-0 bg-deep-brown/85 backdrop-blur-sm transition-opacity"
+        onClick={() => setIsAuthModalOpen(false)}
+        aria-hidden="true"
+        style={{ zIndex: 1 }}
+      />
+
+      {/* 2. Modal Dialog Content - Centered & Responsive above Backdrop */}
+      <div 
+        className="relative z-[2] w-full max-w-md bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto"
+        style={{ zIndex: 2 }}
+        onClick={(e) => e.stopPropagation()}
+      >
         
         {/* Top Heritage Gold Bar */}
         <div className="h-2 bg-gradient-to-r from-traditional-red via-cream-gold to-terracotta" />
@@ -409,4 +445,10 @@ export const AuthModal: React.FC = () => {
       </div>
     </div>
   );
+
+  if (typeof document !== 'undefined') {
+    return createPortal(modalContent, document.body);
+  }
+
+  return modalContent;
 };
