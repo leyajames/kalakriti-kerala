@@ -690,7 +690,7 @@ export const AdminDashboard: React.FC = () => {
                         <div className="lg:col-span-3 space-y-2">
                           <div className="relative rounded-2xl overflow-hidden aspect-video lg:aspect-square bg-deep-brown/5 border border-warm-sand/40 group">
                             <img
-                              src={item.mediaUrls[0] || 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80'}
+                              src={item.mediaUrls[0] || '/assets/images/vadakkunnathan-temple.jpg'}
                               alt={item.title}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />

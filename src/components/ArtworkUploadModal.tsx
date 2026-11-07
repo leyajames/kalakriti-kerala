@@ -42,7 +42,7 @@ export const ArtworkUploadModal: React.FC = () => {
   // 1. Artist Registration Form States
   const [artistName, setArtistName] = useState('');
   const [stageName, setStageName] = useState('');
-  const [avatarUrl, setAvatarUrl] = useState('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80');
+  const [avatarUrl, setAvatarUrl] = useState('/assets/images/kalamandalam-sivan-portrait.jpg');
   const [taluk, setTaluk] = useState<Taluk>('Thrissur');
   const [studioAddress, setStudioAddress] = useState('');
   const [selectedArtformId, setSelectedArtformId] = useState(artforms[0]?.id || 'art-kathakali');
@@ -59,8 +59,8 @@ export const ArtworkUploadModal: React.FC = () => {
   
   // Portfolio Photos State (Multiple)
   const [portfolioPhotos, setPortfolioPhotos] = useState<string[]>([
-    'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80'
+    '/assets/images/kerala-mural-temple.jpg',
+    '/assets/images/kuthampully-handloom-loom.jpg'
   ]);
   const [newPhotoUrlInput, setNewPhotoUrlInput] = useState('');
 
@@ -76,7 +76,7 @@ export const ArtworkUploadModal: React.FC = () => {
   const [craftTechnique, setCraftTechnique] = useState('');
   const [storyEn, setStoryEn] = useState('');
   const [artworkImages, setArtworkImages] = useState<string[]>([
-    'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80'
+    '/assets/images/kerala-mural-venugopala.jpg'
   ]);
   const [artworkImageInput, setArtworkImageInput] = useState('');
 
@@ -406,7 +406,7 @@ export const ArtworkUploadModal: React.FC = () => {
                         type="url"
                         value={avatarUrl}
                         onChange={(e) => setAvatarUrl(e.target.value)}
-                        placeholder="https://images.unsplash.com/..."
+                        placeholder="https://... or image link"
                         className="w-full px-3 py-1.5 rounded-lg border border-warm-sand/40 text-xs text-deep-brown font-mono"
                       />
                     </div>

@@ -25,11 +25,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'തൃശ്ശൂർ നഗരത്തിന്റെ കേന്ദ്രബിന്ദുവായ വടക്കുന്നാഥൻ ഇലഞ്ഞിത്തറ മേളത്തിനും കുടമാറ്റത്തിനും വേദിയാകുന്നു. കൂടിയാട്ടത്തിനും ചാക്യാർകൂത്തിനുമായി നിർമ്മിച്ച കൂത്തമ്പലം പുരാതന ശബ്ദശാസ്ത്രത്തിന്റെ ഉത്തമ മാതൃകയാണ്.',
     historicalContextEn: 'According to epigraphical surveys and architectural records of the Archaeological Survey of India (ASI), structural portions date from the 8th to 12th centuries CE under Chera patronages, with significant expansion executed under Maharaja Sakthan Thampuran in the late 18th century. Legends attribute its foundation to sage Parasurama, though reliable epigraphy confirms medieval origins.',
     historicalContextMl: 'എട്ടാം നൂറ്റാണ്ടിലെ ചേര സാമ്രാജ്യത്തിന്റെ കാലഘട്ടം മുതൽ നിലനിൽക്കുന്നതെന്ന് പുരാവസ്തു രേഖകൾ സ്ഥിരീകരിക്കുന്നു. പതിനെട്ടാം നൂറ്റാണ്ടിൽ ശക്തൻ തമ്പുരാന്റെ കാലത്താണ് ഇന്നത്തെ രൂപത്തിലുള്ള വിപുലീകരണങ്ങൾ നടന്നത്.',
-    image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/vadakkunnathan-temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/vadakkunnathan-temple.jpg',
+      '/assets/images/vadakkunnathan-night.jpg',
+      '/assets/images/kerala-mural-krishna.jpg'
     ],
     highlights: ['UNESCO Asia-Pacific Award (2015)', '15th-Century Vegetable Dye Murals', 'Acoustic Wooden Koothambalam', 'Four Monumental Gopurams', 'Ilanjithara Melam Sacred Tree'],
     dressCodeOrAdvisory: 'Traditional attire mandatory (Dhoti/Mundu for men; Saree/Set-Mundu/Salwar for women). Non-Hindus can explore the monumental outer prakaram, gopurams, and museum grounds.',
@@ -77,11 +77,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'വംശനാശഭീഷണി നേരിട്ടിരുന്ന കൂടിയാട്ടം, കഥകളി, മോഹിനിയാട്ടം എന്നീ കലകളെ ആധുനിക യുഗത്തിൽ വീണ്ടെടുത്ത കേന്ദ്രം. കൂടിയാട്ടത്തിന് യുനെസ്കോ അംഗീകാരം നേടിക്കൊടുക്കുന്നതിൽ നിർണ്ണായക പങ്കുവഹിച്ചു.',
     historicalContextEn: 'Officially inaugurated on November 9, 1930 in Kunnamkulam and subsequently relocated to Cheruthuruthy in 1933 after Cochin Maharaja Rama Varma donated land by the Nila River. Upgraded to a Deemed University for Art and Culture by the Ministry of HRD in 2006.',
     historicalContextMl: '1930 നവംബർ 9-ന് കുന്നംകുളത്ത് പ്രവർത്തനം ആരംഭിക്കുകയും പിന്നീട് 1933-ൽ കൊച്ചി മഹാരാജാവ് വിട്ടുനൽകിയ ചെറുതുരുത്തിയിലെ ഭൂമിയിലേക്ക് മാറ്റുകയും ചെയ്തു. 2006-ൽ കല്പിത സർവകലാശാലയായി ഉയർത്തപ്പെട്ടു.',
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/kalamandalam-koothambalam.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/kalamandalam-koothambalam.jpg',
+      '/assets/images/koodiyattam-theatre.jpg',
+      '/assets/images/kathakali-hero.jpg'
     ],
     highlights: ['UNESCO Recognised Gurukulam', 'Nila Riverfront Campus', 'Vallathol Memorial & Museum', 'Teakwood Pillar Koothambalam', '"A Day with Masters" Tour'],
     dressCodeOrAdvisory: 'Modest attire requested. Prior registration required for guided classroom observations.',
@@ -130,11 +130,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'കേരളത്തിലെ കസവു സാരി നിർമ്മാണത്തിൽ ആഗോള ഭൗമസൂചികാ പദവി (GI Tag) നേടിയ പ്രധാന കേന്ദ്രം. ഭാരതപ്പുഴയുടെ തീരത്തെ അന്തരീക്ഷ ഈർപ്പവും നൂറ്റാണ്ടുകളുടെ കൈത്തറി പാടവവുമാണ് ഇതിന്റെ പ്രത്യേകത.',
     historicalContextEn: 'Historical records of the Cochin Royal Family document that master weavers from the Devanga community migrated from Karnataka / Mysore region 500 years ago upon royal invitation to craft exclusive ceremonial vestments for the palace and temples.',
     historicalContextMl: 'കൊച്ചി രാജകുടുംബത്തിന്റെ പ്രത്യേക ക്ഷണപ്രകാരം അഞ്ഞൂറ് വർഷം മുൻപ് കർണ്ണാടകയിൽ നിന്ന് എത്തി തിരുവില്വാമലയിൽ സ്ഥിരതാമസമാക്കിയ ദേവാംഗ നെയ്ത്തു സമുദായമാണ് ഈ പാരമ്പര്യം തുടരുന്നത്.',
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/kuthampully-handloom-loom.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/kuthampully-handloom-loom.jpg',
+      '/assets/images/kuthampully-handloom-loom-2.jpg',
+      '/assets/images/thiruvilwamala-temple.jpg'
     ],
     highlights: ['GI Tag Registry No. 179 (Certified 2011)', 'Traditional Pit Looms', 'Natural Unbleached Combed Cotton', 'Direct Cooperative Buying', 'Jacquard Punch-Card Mechanisms'],
     dressCodeOrAdvisory: 'Respectful walking through residential artisan streets.',
@@ -182,11 +182,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'ഭൗമസൂചികാ പദവി നേടിയ നടവരമ്പിലെ വെങ്കല വിദ്യ നാദശുദ്ധിയുള്ള ക്ഷേത്രമണികൾക്കും അതിവിശിഷ്ട നിലവിളക്കുകൾക്കും പേരുകേട്ടതാണ്.',
     historicalContextEn: 'Historical guild records from the Cochin Royal archives mention the supply of ceremonial bronze cauldrons (Varpu) and oil lamps from Nadavaramba to major shrines like Vadakkunnathan and Guruvayur since the early 17th century.',
     historicalContextMl: 'പതിനേഴാം നൂറ്റാണ്ട് മുതൽ വടക്കുന്നാഥൻ, ഗുരുവായൂർ തുടങ്ങിയ മഹാക്ഷേത്രങ്ങളിലേക്ക് നിലവിളക്കുകളും വെങ്കല പാത്രങ്ങളും നിർമ്മിച്ചു നൽകിയിരുന്ന ചരിത്രം കൊച്ചി രാജകീയ രേഖകളിലുണ്ട്.',
-    image: 'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/nadavaramba-bronze-nilavilakku.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/nadavaramba-bronze-nilavilakku.jpg',
+      '/assets/images/nadavaramba-bronze-nilavilakku-2.jpg',
+      '/assets/images/bhadrakali-bronze-idol.jpg'
     ],
     highlights: ['GI Tagged Metallurgical Craft (2019)', 'Ancient Lost-Wax Moulding', '1100°C Crucible Furnace Casting', 'Hand Turned Lathe Polishing', 'Temple Sacred Acoustics'],
     dressCodeOrAdvisory: 'Caution required near active foundry furnaces and molten metal crucibles.',
@@ -234,11 +234,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'തൃശ്ശൂരിനെ ഒരു സാംസ്കാരിക തലസ്ഥാനമായി മാറ്റിയ ചരിത്ര കാലഘട്ടത്തിന്റെ സ്മാരകം. അയ്യലിൽ നിന്ന് കണ്ടെടുത്ത റോമൻ നാണയങ്ങളും പ്രാചീന ശിലായുഗ അവശിഷ്ടങ്ങളും ഇവിടെ പ്രദർശിപ്പിച്ചിരിക്കുന്നു.',
     historicalContextEn: 'Historically known as Vadakkechira Kovilakam, this palace was restructured in 1795 following the Dutch and British colonial engagements in Cochin. Taken over by the Kerala State Archaeology Department in 2005 and converted into a public heritage museum.',
     historicalContextMl: 'പഴയ വടക്കേച്ചിറ കോവിലകം 1795-ൽ ശക്തൻ തമ്പുരാൻ പുനർനിർമ്മിക്കുകയായിരുന്നു. 2005-ൽ സംസ്ഥാന പുരാവസ്തു വകുപ്പ് ഏറ്റെടുത്ത് ചരിത്ര മ്യൂസിയമാക്കി മാറ്റി.',
-    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/shakthan-palace.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548625361-195fe578cb26?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/shakthan-palace.jpg',
+      '/assets/images/bhadrakali-bronze-idol.jpg',
+      '/assets/images/archaeological-museum-kollengode.jpg'
     ],
     highlights: ['Dutch-Kerala Colonial Synthesis', 'Roman Gold Coin Hoard Gallery', 'Megalithic Stone Burial Urns', 'Royal Arms & Armoury Room', 'Sacred Sarpakkavu Grove'],
     dressCodeOrAdvisory: 'Modest casual attire. Photography permits available at entrance counter.',
@@ -286,11 +286,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: '1798-ൽ ശക്തൻ തമ്പുരാൻ തുടക്കം കുറിച്ച തൃശ്ശൂർ പൂരം ജാതിമതഭേദമന്യേ സർവ്വജനങ്ങളും ഒന്നിക്കുന്ന ലോകോത്തര ഉത്സവമാണ്.',
     historicalContextEn: 'Historically an impenetrable teak jungle (Thekkinkadu literally means "forest of teak trees") infested with wild animals and outlaws, the grounds were cleared by Sakthan Thampuran using elephant corps to establish Swaraj Round.',
     historicalContextMl: 'പണ്ട് ഇടതൂർന്ന തേക്കിൻകാടായിരുന്ന ഈ പ്രദേശം ശക്തൻ തമ്പുരാൻ ആനകളെ ഉപയോഗിച്ച് വെട്ടിത്തെളിച്ച് നഗരകേന്ദ്രമാക്കുകയായിരുന്നു.',
-    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/thekkinkadu-maidan.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/thekkinkadu-maidan.jpg',
+      '/assets/images/ilanjithara-melam.jpg',
+      '/assets/images/thrissur-pooram-kudamattam.jpg'
     ],
     highlights: ['Ilanjithara Melam Rhythms', 'Kudamattam Elephant Parasol Arena', 'Onam Pulikali Assembly Grounds', 'Pooram Trade Fair Expo', 'Bilingual Open Public Park'],
     dressCodeOrAdvisory: 'Public grounds. Designated safety zones enforce crowd regulations during festival fireworks.',
@@ -338,11 +338,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'കേരളത്തിലെ സുറിയാനി കത്തോലിക്കാ പൈതൃകത്തിന്റെ വിസ്മയം. 1992-ൽ ജോൺ പോൾ രണ്ടാമൻ മാർപ്പാപ്പ ബസിലിക്കയായി ഉയർത്തി.',
     historicalContextEn: 'Originally established in 1814 with royal sanction from the Maharaja of Cochin. The present monumental Gothic cathedral was designed by architect J. M. Ambrose and constructed between 1929 and 1940 with community participation.',
     historicalContextMl: '1814-ൽ കൊച്ചി രാജാവിന്റെ പ്രത്യേക അനുമതിയോടെ ആരംഭിച്ച പള്ളി, 1929-1940 കാലഘട്ടത്തിലാണ് ഇന്നത്തെ കൂറ്റൻ ഗോഥിക് രൂപത്തിൽ പുനർനിർമ്മിക്കപ്പെട്ടത്.',
-    image: 'https://images.unsplash.com/photo-1548625361-195fe578cb26?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/dolours-basilica.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1548625361-195fe578cb26?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/dolours-basilica.jpg',
+      '/assets/images/dolours-basilica-alt.jpg',
+      '/assets/images/thekkinkadu-maidan-2.jpg'
     ],
     highlights: ['260-Foot Gothic Tower', 'Stained Glass Artistry', 'Acoustically Engineered Vaulted Ceilings', 'Historic Choral Bells', 'Centenary Historical Museum'],
     dressCodeOrAdvisory: 'Modest respectful clothing required inside the church nave.',
@@ -390,11 +390,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'മതസൗഹാർദ്ദത്തിന്റെ ഉജ്ജ്വല മാതൃക. സർവ്വമതസ്ഥരും ഈ പള്ളിയിലെ നിലവിളക്കിലേക്ക് എണ്ണ നൽകി പ്രാർത്ഥിക്കുകയും വിദ്യാരംഭം കുറിക്കുകയും ചെയ്യുന്നു.',
     historicalContextEn: 'Historical traditions record the journey of Cheraman Perumal (Rama Varma Kulashekhara) to Arabia. Documented trade records from the Muziris port complex corroborate extensive maritime trade between Rome, Arabia, and Kodungallur during the 7th century CE.',
     historicalContextMl: 'ചേരമാൻ പെരുമാളിന്റെ യാത്രയും തുടർന്ന് മാലിക് ദീനാറിന്റെ നേതൃത്വത്തിൽ നടന്ന നിർമ്മാണവുമാണ് പള്ളിയുടെ ഉത്ഭവത്തിന് പിന്നിൽ. മുസിരിസ് തുറമുഖ പൈതൃകവുമായി ഈ ചരിത്രം ബന്ധപ്പെട്ടിരിക്കുന്നു.',
-    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/cheraman-mosque.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548625361-195fe578cb26?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/cheraman-mosque.jpg',
+      '/assets/images/kodungallur-temple.jpg',
+      '/assets/images/thekkinkadu-maidan.jpg'
     ],
     highlights: ['Established 629 CE (7th Century)', 'Kerala Wooden Temple-Style Roofs', '1000-Year-Old Eternal Brass Lamp', 'Muziris Heritage Museum Center', 'Ancient Rosewood Pulpit (Mimbar)'],
     dressCodeOrAdvisory: 'Modest clothing required. Heritage museum open to all visitors of any faith.',
@@ -442,11 +442,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'ചവിട്ടുനാടകം, തോൽപ്പാവക്കൂത്ത് തുടങ്ങിയ നാടോടി കലകളെ സംരക്ഷിക്കുന്നതിനൊപ്പം ആധുനിക മലയാള നാടകവേദിയെ അന്താരാഷ്ട്ര തലത്തിലേക്ക് ഉയർത്തിയ കേന്ദ്രം.',
     historicalContextEn: 'Established on April 26, 1958 by the Government of Kerala and formally inaugurated by Prime Minister Jawaharlal Nehru in Thrissur. The complex includes the K. T. Muhammed Regional Theatre and Bharat Murali Open-Air Auditorium.',
     historicalContextMl: '1958 ഏപ്രിൽ 26-ന് ജവഹർലാൽ നെഹ്റു ഉദ്ഘാടനം ചെയ്ത ഈ സ്ഥാപനം അരനൂറ്റാണ്ടിലേറെയായി കേരളത്തിലെ നാടക-സംഗീത ശാഖകളെ പരിപോഷിപ്പിക്കുന്നു.',
-    image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/sangeetha-nataka-akademi.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/sangeetha-nataka-akademi.jpg',
+      '/assets/images/kadavallur-temple-gopuram.jpg',
+      '/assets/images/koodiyattam-theatre.jpg'
     ],
     highlights: ['ITFOK International Theatre Fest', 'Nataka Kalari Training Workshops', 'Folk Instrument Archival Collection', 'K. T. Muhammed Regional Theatre', 'Comprehensive Performing Arts Library'],
     dressCodeOrAdvisory: 'Modest casual attire. Flash photography prohibited during live theatrical plays.',
@@ -494,11 +494,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'കേരളത്തിലെ ക്ഷേത്ര ചുവർചിത്രങ്ങളുടെ സംരക്ഷണത്തിലും ആധുനിക ചിത്രകലയുടെ വികാസത്തിലും നേതൃത്വം നൽകുന്ന പ്രമുഖ സ്ഥാപനം.',
     historicalContextEn: 'Founded by the Government of Kerala in 1962. It functions in close coordination with Lalit Kala Akademi New Delhi and coordinates artist-in-residence programs in Thrissur.',
     historicalContextMl: '1962-ൽ സ്ഥാപിതമായ ഈ സ്ഥാപനം ചിത്രകലാ ക്യാമ്പുകളും അന്താരാഷ്ട്ര ശിൽപശാലകളും സംഘടിപ്പിച്ചുപോരുന്നു.',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/lalithakala-akademi.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/lalithakala-akademi.jpg',
+      '/assets/images/kerala-mural-temple.jpg',
+      '/assets/images/kerala-mural-ganesha.jpg'
     ],
     highlights: ['Mural Restoration Archives', 'Raja Ravi Varma Memorial Galleries', 'Open Air Sculpture Park', 'State Award Winning Art Collections', 'Artisan Printmaking Workshops'],
     dressCodeOrAdvisory: 'Open to public. Flash photography restricted inside conservation galleries.',
@@ -546,11 +546,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'മലയാള ഭാഷയുടെയും സാഹിത്യത്തിന്റെയും വികാസത്തിന് നേതൃത്വം നൽകുന്ന അത്യുന്നത സാംസ്കാരിക സ്ഥാപനം.',
     historicalContextEn: 'Inaugurated on August 15, 1956 in Thiruvananthapuram and relocated to Thrissur in September 1957. Renowned novelist Sardar K. M. Panikkar served as its first president.',
     historicalContextMl: '1956-ൽ സ്ഥാപിതമായ അക്കാദമി 1957-ൽ തൃശ്ശൂരിലേക്ക് മാറ്റിസ്ഥാപിച്ചു. സർദാർ കെ. എം. പണിക്കരായിരുന്നു പ്രഥമ അധ്യക്ഷൻ.',
-    image: 'https://images.unsplash.com/photo-1507842229458-574a44131920?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/sahitya-akademi-building.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1507842229458-574a44131920?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1548625361-195fe578cb26?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/sahitya-akademi-building.jpg',
+      '/assets/images/thekkinkadu-maidan.jpg',
+      '/assets/images/shakthan-palace.jpg'
     ],
     highlights: ['Rare Palm-Leaf Manuscript Section', '150,000 Volume Reference Library', 'Portrait Gallery of Literary Masters', 'Historic Changampuzha Hall', 'Annual International Book Fair'],
     dressCodeOrAdvisory: 'Quiet study decorum requested inside reading rooms.',
@@ -598,11 +598,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'പഞ്ചാരിമേളത്തിന് ലോകപ്രശസ്തി നേടിക്കൊടുത്ത പെരുവനം കുട്ടൻ മാരാരടക്കമുള്ള മേളപ്രമാണിമാരുടെ തട്ടകം.',
     historicalContextEn: 'Documented in medieval Grantha records and Sangam-era references as one of the 64 ancient Namboothiri settlements of Kerala. The double-storeyed octagonal copper-plated sanctum (Madathilappan) is an architectural wonder dating to the 11th century CE.',
     historicalContextMl: 'പതിനൊന്നാം നൂറ്റാണ്ടിലെ അപൂർവ്വമായ ഇരട്ടനില ശ്രീകോവിലും പുരാതന ചെപ്പേടുകളും പെരുവനത്തിന്റെ പ്രാചീനത സാക്ഷ്യപ്പെടുത്തുന്നു.',
-    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/arattupuzha-pooram.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/arattupuzha-pooram.jpg',
+      '/assets/images/chenda-melam.jpg',
+      '/assets/images/ilanjithara-melam.jpg'
     ],
     highlights: ['Cradle of Panchari Melam', 'Unique Double-Storeyed Octagonal Sreekovil', 'Historic Peruvanam Pooram Traditions', 'Sacred Melam Kalari Repertoire', 'Ancient Inscription Tablets'],
     dressCodeOrAdvisory: 'Traditional temple dress code required inside inner sanctum.',
@@ -650,11 +650,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'കഥകളിയുടെ മാതൃരൂപമായ കൃഷ്ണനാട്ടത്തിന്റെ ഈറ്റില്ലം. പ്രകൃതിദത്ത ചുവർചിത്രങ്ങൾ വരയ്ക്കുന്ന വിദഗ്ദ്ധരെ വാർത്തെടുക്കുന്ന കേന്ദ്രം.',
     historicalContextEn: 'Documented in 14th-century Tamil texts and the Kokasandesa. Reconstructed extensively after the 1970 fire, meticulously preserving authentic stone carvings and copper roofing under national conservation advisory.',
     historicalContextMl: 'പതിനാലാം നൂറ്റാണ്ടിലെ ഗ്രന്ഥങ്ങളിൽ പരാമർശമുള്ള ഗുരുവായൂർ ക്ഷേത്രം പൗരാണിക വാസ്തുവിദ്യയുടെ വിസ്മയമാണ്.',
-    image: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/guruvayur-sree-krishna-temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/guruvayur-sree-krishna-temple.jpg',
+      '/assets/images/punnathur-kotta-elephants.jpg',
+      '/assets/images/kerala-mural-krishna.jpg'
     ],
     highlights: ['Institute of Mural Painting', 'Krishnanattam Classical Dance Troupe', 'Edakka Sopana Sangeetham Recitals', 'Deepastambham 1000-Lamp Pillar', 'Sree Krishna Gitanjali Library'],
     dressCodeOrAdvisory: 'Strict traditional attire mandatory. Non-Hindus can visit the Mural Institute and outer Nada.',
@@ -702,11 +702,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'ഗജശാസ്ത്ര പാരമ്പര്യവും നെറ്റിപ്പട്ടം, വെഞ്ചാമരം, ആലവട്ടം തുടങ്ങിയ പൂരാഭരണ നിർമ്മാണവും നിലനിൽക്കുന്ന കേന്ദ്രം.',
     historicalContextEn: 'The palace was acquired by Guruvayur Devaswom in 1975 from the Punnathur royal lineage, preserving its centuries-old timber structures, step wells, and lush greenery.',
     historicalContextMl: '1975-ൽ പുന്നത്തൂർ രാജവംശത്തിൽ നിന്ന് ദേവസ്വം ഏറ്റെടുത്ത് ആനത്താവളമാക്കി മാറ്റി.',
-    image: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/punnathur-kotta-elephants.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/punnathur-kotta-elephants.jpg',
+      '/assets/images/guruvayur-sree-krishna-temple.jpg',
+      '/assets/images/thrissur-pooram-kudamattam.jpg'
     ],
     highlights: ['Ancient Naalukettu Royal Palace', 'Traditional Elephant Regalia Workshop', 'Ayurvedic Elephant Rejuvenation (Sukha Chikitsa)', 'Verdant 10-Acre Heritage Groves'],
     dressCodeOrAdvisory: 'Safe viewing distances must be maintained strictly under mahout supervision.',
@@ -754,11 +754,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'പൈങ്കുളം രാമച്ചാക്യാരും അമ്മാന്നൂർ മാധവച്ചാക്യാരും കൂടിയാട്ടത്തെ ലോകവേദിയിലേക്ക് കൈപിടിച്ചുയർത്തിയത് ഇവിടുത്തെ കൂത്തമ്പലത്തിലൂടെയാണ്.',
     historicalContextEn: 'Documented in Chera-era copper plate grants and the Vattezhuthu inscription of 854 CE (during the reign of Sthanu Ravi Varma), proving continuous worship and artistic patronage for over 1,170 years.',
     historicalContextMl: 'ക്രി.വ. 854-ലെ സ്ഥാണു രവി വർമ്മന്റെ വട്ടെഴുത്ത് ശാസനത്തിൽ കൂടൽമാണിക്യം ക്ഷേത്രത്തെക്കുറിച്ച് രേഖപ്പെടുത്തിയിട്ടുണ്ട്.',
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/koodalmanikyam-temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/koodalmanikyam-temple.jpg',
+      '/assets/images/koodiyattam-theatre.jpg',
+      '/assets/images/chenda-melam.jpg'
     ],
     highlights: ['Only Bharata Temple in India', 'Monumental Teakwood Koothambalam', 'Ammannur Koodiyattam Heritage', 'Four Vast Sacred Ponds (Kuttan Kulam, Kulipini Theertham)', 'Vedic Temple Herbal Medicine (Mukkudi Nivedyam)'],
     dressCodeOrAdvisory: 'Traditional Hindu temple dress code in effect.',
@@ -806,11 +806,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'ജാതിവ്യവസ്ഥകൾക്കതീതമായി കാവുതീണ്ടൽ ചടങ്ങ് നടക്കുന്ന നാടോടി അനുഷ്ഠാന കലകളുടെ പുണ്യകേന്ദ്രം.',
     historicalContextEn: 'Referenced in Sangam literature as Mahodayapuram / Muziris. Historical chronicles confirm its prominence as the coronation temple of the Second Chera Empire (Kulasekharas) during the 9th to 12th centuries CE.',
     historicalContextMl: 'സംഘകാല സാഹിത്യത്തിലും ചിലപ്പതികാരത്തിലും പരാമർശമുള്ള കൊടുങ്ങല്ലൂർ രണ്ടാം ചേര സാമ്രാജ്യത്തിന്റെ പ്രധാന കേന്ദ്രമായിരുന്നു.',
-    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/kodungallur-temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/kodungallur-temple.jpg',
+      '/assets/images/cheraman-mosque.jpg',
+      '/assets/images/pulikali-carnival.jpg'
     ],
     highlights: ['Cilappatikaram & Kannaki Legend', 'Kaavu Theendal Sacred Bharani Rite', 'Velichappadu Sword Dance Ensembles', 'Ancient Muziris Maritime Circuit', 'Sapthamathruka Stone Shrines'],
     dressCodeOrAdvisory: 'Modest traditional dress code. Heavy crowd during Meenam Bharani festival.',
@@ -858,11 +858,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'തായമ്പകയ്ക്കും മദ്ദളക്കPublicKeyക്കും പ്രസിദ്ധമായ ഈ ക്ഷേത്രം ഏകാദശി ഉത്സവത്തിലൂടെ വാദ്യകലയ്ക്ക് വലിയ സംഭാവന നൽകുന്നു.',
     historicalContextEn: 'Documented in medieval Namboothiri chronicles. The temple was reconstructed following a fire in the 1860s under the patronage of the Cochin royal family, preserving ancient granite pillars and copper gabled roofs.',
     historicalContextMl: 'പതിനെട്ടാം നൂറ്റാണ്ടിലെ കൊച്ചി രാജകീയ രേഖകളിൽ പരാമർശമുള്ള ഈ ക്ഷേത്രം തനിമയാർന്ന ഗ്രാനൈറ്റ് തൂണുകളാലും വാസ്തുവിദ്യയാലും സമ്പന്നമാണ്.',
-    image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/thiruvilwamala-temple.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/thiruvilwamala-temple.jpg',
+      '/assets/images/kuthampully-handloom-loom.jpg',
+      '/assets/images/kuthampully-handloom-loom-2.jpg'
     ],
     highlights: ['Natural Punarjani Cave Tunnel', 'Panoramic Nila Valley Vistas', 'Vilwadrinatha Ekadashi Melam', 'Granite Sculpted Chuttambalam', 'Temple Panchavadyam Ensembles'],
     dressCodeOrAdvisory: 'Modest traditional attire. Cave crawl permissible only on Ekadashi under guidance.',
@@ -910,11 +910,11 @@ export const CULTURAL_LOCATIONS_DATA: CulturalLocation[] = [
     culturalSignificanceMl: 'വനസംരക്ഷണ സമിതികളുടെ സഹകരണത്തോടെ ആദിവാസി സമുദായങ്ങളുടെ ഉപജീവനവും തനത് മുള-ഈറ്റ കരകൗശലങ്ങളും സംരക്ഷിക്കപ്പെടുന്നു.',
     historicalContextEn: 'Anthropological studies by the Anthropological Survey of India confirm the Kadar as one of the oldest hunter-gatherer and artisan tribes of the Western Ghats with ancient oral traditions of forest conservation.',
     historicalContextMl: 'പശ്ചിമഘട്ടത്തിലെ ഏറ്റവും പുരാതനമായ ആദിവാസി വിഭാഗങ്ങളിലൊന്നാണ് കാടർ സമുദായം എന്ന് നരവംശശാസ്ത്ര രേഖകൾ വ്യക്തമാക്കുന്നു.',
-    image: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/images/athirappilly-waterfalls.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/athirappilly-waterfalls.jpg',
+      '/assets/images/pottery-clay-wheel.jpg',
+      '/assets/images/pottery-clay-wheel-2.jpg'
     ],
     highlights: ['Wild Bamboo & Reed Weaving', 'Eco-Development Community Centers', 'Non-Timber Forest Produce Exhibits', 'Rainforest Cultural Walkways', 'Direct Community Cooperatives'],
     dressCodeOrAdvisory: 'Eco-sensitive sanctuary zone. Plastic strictly prohibited. Forest check-post permits apply.',

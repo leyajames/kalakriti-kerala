@@ -56,7 +56,7 @@ export const ArtistDashboard: React.FC = () => {
   const [newCraftTechnique, setNewCraftTechnique] = useState('Traditional handcrafting method');
   const [newStoryEn, setNewStoryEn] = useState('');
   const [newImages, setNewImages] = useState<string[]>([
-    'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80'
+    '/assets/images/kerala-mural-venugopala.jpg'
   ]);
   const [newImageUrlInput, setNewImageUrlInput] = useState('');
 
@@ -148,7 +148,7 @@ export const ArtistDashboard: React.FC = () => {
     setNewTitleEn('');
     setNewTitleMl('');
     setNewStoryEn('');
-    setNewImages(['https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80']);
+    setNewImages(['/assets/images/kerala-mural-venugopala.jpg']);
   };
 
   // Save Edited Artwork

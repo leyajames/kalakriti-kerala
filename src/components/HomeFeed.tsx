@@ -88,7 +88,7 @@ export const HomeFeed: React.FC = () => {
       titleMl: 'പാരമ്പര്യ കലകൾ',
       descriptionEn: 'Sacred temple murals, Kathakali Koppu headdresses & ritual paintings.',
       descriptionMl: 'ക്ഷേത്ര ചുവർചിത്രങ്ങൾ, കഥകളി കിരീട നിർമ്മാണം.',
-      image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80',
+      image: '/assets/images/kerala-mural-temple.jpg',
       tabTarget: 'discover',
       filterTarget: 'art-mural',
       count: '15+ Studios'
@@ -99,7 +99,7 @@ export const HomeFeed: React.FC = () => {
       titleMl: 'രംഗകലകൾ',
       descriptionEn: 'UNESCO Koodiyattam, Kathakali, Mohiniyattam & temple Melam.',
       descriptionMl: 'കൂടിയാട്ടം, കഥകളി, മോഹിനിയാട്ടം, പഞ്ചവാദ്യം.',
-      image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80',
+      image: '/assets/images/koodiyattam-theatre.jpg',
       tabTarget: 'discover',
       filterTarget: 'art-koodiyattam',
       count: '40+ Masters'
@@ -110,7 +110,7 @@ export const HomeFeed: React.FC = () => {
       titleMl: 'കരകൗശലങ്ങൾ',
       descriptionEn: 'GI-tagged Kuthampully Kasavu weaving & Nadavaramba bell metal casting.',
       descriptionMl: 'കുത്തമ്പുള്ളി കൈത്തറി, നടവരമ്പ് വെങ്കല ശിൽപങ്ങൾ.',
-      image: 'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=600&q=80',
+      image: '/assets/images/nadavaramba-bronze-nilavilakku.jpg',
       tabTarget: 'discover',
       filterTarget: 'art-nadavaramba',
       count: '2 GI Clusters'
@@ -121,7 +121,7 @@ export const HomeFeed: React.FC = () => {
       titleMl: 'പൈതൃക കേന്ദ്രങ്ങൾ',
       descriptionEn: 'Vadakkunnathan Temple, Shakthan Palace & Asian Gothic basilicas.',
       descriptionMl: 'വടക്കുന്നാഥൻ, ശക്തൻ കൊട്ടാരം, പുത്തൻപള്ളി.',
-      image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80',
+      image: '/assets/images/vadakkunnathan-temple.jpg',
       tabTarget: 'heritage',
       filterTarget: 'all',
       count: '12 Monuments'
@@ -132,7 +132,7 @@ export const HomeFeed: React.FC = () => {
       titleMl: 'ഉത്സവങ്ങളും പൂരങ്ങളും',
       descriptionEn: 'Thrissur Pooram, Swaraj Round Pulikali & Mamangam effigies.',
       descriptionMl: 'തൃശ്ശൂർ പൂരം, പുലിക്കളി, മച്ചാട് മാമാങ്കം.',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80',
+      image: '/assets/images/thrissur-pooram-kudamattam.jpg',
       tabTarget: 'events',
       filterTarget: 'all',
       count: '25+ Poorams'
@@ -143,7 +143,7 @@ export const HomeFeed: React.FC = () => {
       titleMl: 'കളരികളും ശിൽപശാലകളും',
       descriptionEn: 'Hands-on masterclasses in temple rhythms, mural pigments & mudras.',
       descriptionMl: 'ചെണ്ടമേളം, ചുവർചിത്രം, കൂടിയാട്ടം ക്ലാസുകൾ.',
-      image: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80',
+      image: '/assets/images/pottery-clay-wheel.jpg',
       tabTarget: 'workshops',
       filterTarget: 'all',
       count: '6 Active Classes'
@@ -160,7 +160,7 @@ export const HomeFeed: React.FC = () => {
       location: 'Cheruthuruthy, Thalapilly',
       descriptionEn: 'Experience 1,800 years of unbroken Sanskrit theatrical heritage on the banks of River Bharathapuzha.',
       descriptionMl: 'ഭാരതപ്പുഴയുടെ തീരത്ത് യുനെസ്കോ അംഗീകരിച്ച ലോകത്തിലെ ഏറ്റവും പുരാതന സംസ്കൃത നാടകം കാണാം.',
-      image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/koodiyattam-theatre.jpg',
       badge: 'UNESCO Heritage'
     },
     {
@@ -170,8 +170,8 @@ export const HomeFeed: React.FC = () => {
       titleMl: 'ഇലഞ്ഞിത്തറയിലെ പാണ്ടിമേളം',
       location: 'Thekkinkadu Maidan, Thrissur',
       descriptionEn: '250 master percussionists synchronizing under the Ilanji tree during the peak of Thrissur Pooram.',
-      descriptionMl: 'ഇലഞ്ഞിത്തറയിൽ 250 മേളപ്രമാണിമാരുടെ അത്യുജ്ജ്വല താളവിസ്മയം.',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80',
+      descriptionMl: 'ഇലഞ്ഞിത്തറയിൽ 250 മേളപ്രമാണിമാരുടെ അത്യജ്ജ്വല താളവിസ്മയം.',
+      image: '/assets/images/ilanjithara-melam.jpg',
       badge: 'World Acoustic Wonder'
     },
     {
@@ -182,7 +182,7 @@ export const HomeFeed: React.FC = () => {
       location: 'Swaraj Round, Thrissur',
       descriptionEn: 'Admire rare 15th-century Panchavarna fresco murals painted with vegetable dyes on ancient wooden architecture.',
       descriptionMl: 'പ്രകൃതിദത്ത വർണ്ണങ്ങൾ കൊണ്ട് രചിച്ച അതിപുരാതന ചുവർചിത്രങ്ങളും കൂത്തമ്പലവും.',
-      image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/kerala-mural-krishna.jpg',
       badge: 'UNESCO Asia-Pacific Award'
     },
     {
@@ -193,7 +193,7 @@ export const HomeFeed: React.FC = () => {
       location: 'Thiruvilwamala, Thrissur',
       descriptionEn: 'Watch generational pit-loom artisans weave pure gold Kasavu sarees using authentic jacquard designs.',
       descriptionMl: 'അഞ്ഞൂറ് വർഷത്തെ പാരമ്പര്യമുള്ള കൈത്തറി ഗ്രാമത്തിലെ സന്ദർശനം.',
-      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/kuthampully-handloom-loom.jpg',
       badge: 'GI Tag Certified'
     },
     {
@@ -204,7 +204,7 @@ export const HomeFeed: React.FC = () => {
       location: 'Irinjalakuda, Mukundapuram',
       descriptionEn: 'Witness molten bronze being poured into beeswax clay moulds to forge resonant temple bells and Nilavilakku.',
       descriptionMl: 'മെഴുക് അച്ചുകളിൽ വെങ്കലം വാർത്തെടുക്കുന്ന പ്രാചീന ലോഹവിദ്യ.',
-      image: 'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/nadavaramba-bronze-nilavilakku.jpg',
       badge: 'GI Tag Certified'
     },
     {
@@ -215,7 +215,7 @@ export const HomeFeed: React.FC = () => {
       location: 'Swaraj Round, Thrissur',
       descriptionEn: 'Hundreds of painted tiger dancers and vibrant floats circling Swaraj Round on the 4th day of Onam.',
       descriptionMl: 'ഓണത്തിന്റെ നാലാം നാളിൽ തൃശ്ശൂരിനെ ഇളക്കിമറിക്കുന്ന നാടോടി ഉത്സവവിസ്മയം.',
-      image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
+      image: '/assets/images/pulikali-carnival.jpg',
       badge: '200-Year Tradition'
     }
   ];

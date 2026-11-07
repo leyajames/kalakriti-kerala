@@ -56,7 +56,7 @@ export const EventsDiscovery: React.FC = () => {
   const [formDateISO, setFormDateISO] = useState('');
   const [formTime, setFormTime] = useState('06:00 PM – 10:00 PM');
   const [formMalayalamDate, setFormMalayalamDate] = useState('');
-  const [formBannerUrl, setFormBannerUrl] = useState('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80');
+  const [formBannerUrl, setFormBannerUrl] = useState('/assets/images/thrissur-pooram-kudamattam.jpg');
   const [formDescriptionEn, setFormDescriptionEn] = useState('');
   const [formOrganizerName, setFormOrganizerName] = useState('');
   const [formOrganizerContact, setFormOrganizerContact] = useState('');
@@ -844,7 +844,7 @@ export const EventsDiscovery: React.FC = () => {
                     required
                     value={formBannerUrl}
                     onChange={(e) => setFormBannerUrl(e.target.value)}
-                    placeholder="https://images.unsplash.com/..."
+                    placeholder="https://... or image link"
                     className="w-full px-3 py-2 rounded-xl border border-warm-sand/50 text-xs text-deep-brown outline-none"
                   />
                 </div>

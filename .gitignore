@@ -43,4 +43,7 @@ dist-ssr/
 # Vercel
 .vercel
 
-.vercel
+# Temporary scratch & audit scripts
+scratch/
+image_audit.json
+

@@ -25,11 +25,11 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     malayalamDate: '1202 മേടം 14 • പൂരം നക്ഷത്രം',
     isFreeEntry: true,
     entryFeeDetails: 'Free Public Heritage Festival (Designated enclosures for visitors)',
-    bannerUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/thrissur-pooram-kudamattam.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/thrissur-pooram-kudamattam.jpg',
+      '/assets/images/ilanjithara-melam.jpg',
+      '/assets/images/chenda-melam.jpg'
     ],
     organizer: {
       name: 'Cochin Devaswom Board & Combined Pooram Committees (Paramekkavu & Thiruvambady)',
@@ -102,10 +102,10 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     malayalamDate: '1202 വൃശ്ചികം 27 – ധനു 02',
     isFreeEntry: true,
     entryFeeDetails: 'Free admission for arts enthusiasts; prior online seat reservation recommended.',
-    bannerUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/koodiyattam-theatre.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/koodiyattam-theatre.jpg',
+      '/assets/images/kalamandalam-koothambalam.jpg'
     ],
     organizer: {
       name: 'Kerala Kalamandalam Deemed University for Art and Culture',
@@ -157,9 +157,10 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     malayalamDate: '1202 വൃശ്ചികം 05 – 11',
     isFreeEntry: true,
     entryFeeDetails: 'Free Public Entry. Direct weaver purchase pricing with GI certification guarantee.',
-    bannerUrl: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/kuthampully-handloom-loom.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/kuthampully-handloom-loom.jpg',
+      '/assets/images/kuthampully-handloom-loom-2.jpg'
     ],
     organizer: {
       name: 'Kuthampully Handloom Weavers Industrial Cooperative Society Ltd.',
@@ -209,7 +210,7 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     malayalamDate: '1202 മകരം 22 – 29',
     isFreeEntry: false,
     entryFeeDetails: '₹50 – ₹150 Delegate Passes; Student concessions available.',
-    bannerUrl: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/sangeetha-nataka-akademi.jpg',
     organizer: {
       name: 'Kerala Sangeetha Nataka Akademi & Department of Cultural Affairs',
       role: 'Apex State Performing Arts Akademi',
@@ -262,10 +263,10 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     malayalamDate: '1201 ചിങ്ങം 32 • നാലാം ഓണം',
     isFreeEntry: true,
     entryFeeDetails: 'Public Community Celebration',
-    bannerUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/pulikali-carnival.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80'
+      '/assets/images/sangeetha-nataka-akademi.jpg',
+      '/assets/images/kadavallur-temple-gopuram.jpg'
     ],
     organizer: {
       name: 'Thrissur Municipal Corporation & Pulikali Coordination Committee',
@@ -312,7 +313,7 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     time: '06:00 AM – 11:30 PM',
     malayalamDate: '1201 വൃശ്ചികം 15 • ഏകാദശി',
     isFreeEntry: true,
-    bannerUrl: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/arattupuzha-pooram.jpg',
     organizer: {
       name: 'Cochin Devaswom Board & Triprayar Advisory Committee',
       role: 'Devaswom Authority',
@@ -348,7 +349,7 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     malayalamDate: '1202 വൃശ്ചികം (ഏകാദശിക്ക് മുന്നോടിയായി)',
     isFreeEntry: true,
     entryFeeDetails: 'Free admission for devotees and classical music rasikas.',
-    bannerUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/carnatic-vocal-concert.jpg',
     organizer: {
       name: 'Guruvayur Devaswom Managing Committee',
       role: 'Temple Managing Board',
@@ -390,7 +391,7 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     time: 'Morning 05:00 AM – Midnight',
     malayalamDate: '1202 മേട മാസം (ഉത്രം കൊടിയേറ്റ് പ്രതീക്ഷിതം)',
     isFreeEntry: true,
-    bannerUrl: 'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/koodalmanikyam-temple.jpg',
     organizer: {
       name: 'Koodalmanikyam Devaswom Managing Committee',
       role: 'Statutory Devaswom Board',
@@ -423,7 +424,7 @@ export const CULTURAL_EVENTS_MASTER_DATA: CulturalEvent[] = [
     time: '06:30 PM – 10:30 PM',
     malayalamDate: '1202 മകരം (ഉദ്ദേശിക്കുന്നത്)',
     isFreeEntry: true,
-    bannerUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+    bannerUrl: '/assets/images/kadavallur-temple-gopuram.jpg',
     organizer: {
       name: 'Kunnamkulam Heritage Guild & Folk Performers Collective',
       role: 'Community Cultural Guild',

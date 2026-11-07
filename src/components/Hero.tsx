@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
           initial={shouldReduceMotion ? { scale: 1.05 } : { scale: 1.18, filter: 'brightness(0.3)' }}
           animate={{ scale: 1.05, filter: 'brightness(0.42)' }}
           transition={{ duration: 1.6, ease: 'easeOut' }}
-          src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=2000&q=85"
+          src="/assets/images/kathakali-hero.jpg"
           alt="Traditional Kerala Kathakali Performance at Cheruthuruthy, Thrissur"
           className="w-full h-full object-cover object-center contrast-[1.08]"
         />
