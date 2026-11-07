@@ -47,3 +47,5 @@ dist-ssr/
 scratch/
 image_audit.json
 
+
+.vercel
