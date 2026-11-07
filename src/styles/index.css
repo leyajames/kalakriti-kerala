@@ -103,9 +103,49 @@
   }
 }
 
-/* Smooth Scroll and Selection */
+/* Smooth Scroll, Viewport Protection and Selection */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure Leaflet Popups fit seamlessly on small mobile screens */
+.leaflet-popup-content-wrapper {
+  max-width: calc(100vw - 32px) !important;
+  box-sizing: border-box !important;
+  border-radius: 1rem !important;
+}
+
+.custom-cultural-preview-popup .leaflet-popup-content {
+  margin: 6px !important;
+  max-width: calc(100vw - 44px) !important;
+}
+
+/* iOS Safe Area clearance */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
 }
 
 ::-webkit-scrollbar {

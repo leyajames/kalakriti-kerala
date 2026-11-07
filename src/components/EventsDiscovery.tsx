@@ -480,12 +480,12 @@ export const EventsDiscovery: React.FC = () => {
           role="dialog"
           aria-modal="true"
           aria-labelledby="event-modal-title"
-          className="fixed inset-0 z-70 bg-deep-brown/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn select-none"
+          className="fixed inset-0 z-70 bg-deep-brown/90 backdrop-blur-md flex items-start sm:items-center justify-center p-3 sm:p-6 animate-fadeIn select-none overflow-y-auto"
         >
-          <div className="relative w-full max-w-3xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6">
+          <div className="relative w-full max-w-3xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto my-3 sm:my-6">
             
             {/* Modal Image Header */}
-            <div className="relative h-64 sm:h-72 bg-deep-brown">
+            <div className="relative h-48 sm:h-64 md:h-72 bg-deep-brown">
               <img
                 src={selectedEventModal.bannerUrl}
                 alt={selectedEventModal.titleEn}
@@ -495,24 +495,24 @@ export const EventsDiscovery: React.FC = () => {
 
               <button
                 onClick={() => setSelectedEventModal(null)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10 shadow-md"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="absolute bottom-4 left-6 right-6 text-white space-y-1">
+              <div className="absolute bottom-3 left-4 right-4 sm:bottom-4 sm:left-6 sm:right-6 text-white space-y-1">
                 {getStatusBadge(selectedEventModal.status, selectedEventModal.isConfirmed)}
-                <h3 id="event-modal-title" className="font-display text-2xl sm:text-3xl font-bold">
+                <h3 id="event-modal-title" className="font-display text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
                   {language === 'en' ? selectedEventModal.titleEn : selectedEventModal.titleMl}
                 </h3>
-                <p className="text-xs text-parchment-warm">
+                <p className="text-[11px] sm:text-xs text-parchment-warm">
                   {selectedEventModal.venueName} • {selectedEventModal.locationName}
                 </p>
               </div>
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 sm:p-8 space-y-6 max-h-[55vh] overflow-y-auto text-xs sm:text-sm text-deep-brown/85">
+            <div className="p-4 sm:p-8 space-y-5 sm:space-y-6 max-h-[50vh] sm:max-h-[55vh] overflow-y-auto text-xs sm:text-sm text-deep-brown/85">
               
               {/* Event Description */}
               <div className="space-y-2">
@@ -627,9 +627,9 @@ export const EventsDiscovery: React.FC = () => {
           role="dialog"
           aria-modal="true"
           aria-labelledby="submit-event-title"
-          className="fixed inset-0 z-70 bg-deep-brown/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn select-none"
+          className="fixed inset-0 z-70 bg-deep-brown/90 backdrop-blur-md flex items-start sm:items-center justify-center p-3 sm:p-6 animate-fadeIn select-none overflow-y-auto"
         >
-          <div className="relative w-full max-w-2xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6">
+          <div className="relative w-full max-w-2xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto my-3 sm:my-6">
             
             <div className="p-5 bg-parchment-warm border-b border-warm-sand/30 flex items-center justify-between">
               <div>

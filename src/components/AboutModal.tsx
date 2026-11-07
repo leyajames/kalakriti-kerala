@@ -17,8 +17,8 @@ export const AboutModal: React.FC = () => {
   if (!isAboutModalOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-60 overflow-y-auto bg-deep-brown/85 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn">
-      <div className="relative w-full max-w-2xl bg-white rounded-2xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6">
+    <div className="fixed inset-0 z-60 overflow-y-auto bg-deep-brown/85 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-4 animate-fadeIn">
+      <div className="relative w-full max-w-2xl bg-white rounded-2xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto my-3 sm:my-6">
         
         {/* Top Trim */}
         <div className="h-1.5 bg-gradient-to-r from-traditional-red via-cream-gold to-terracotta" />

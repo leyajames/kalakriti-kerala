@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
 
           {/* Main Heading: Exact Copy Requested */}
           <motion.div variants={itemVariants} className="space-y-2">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-bold leading-[1.12] tracking-tight">
+            <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl text-white font-bold leading-[1.15] sm:leading-[1.12] tracking-tight">
               {language === 'en' ? (
                 <>
                   Discover the Stories <br />
@@ -126,23 +126,23 @@ export const Hero: React.FC = () => {
           </motion.div>
 
           {/* Supporting Text: Exact Copy Requested */}
-          <motion.p variants={itemVariants} className="text-parchment-warm/90 text-base sm:text-lg sm:leading-relaxed font-normal max-w-2xl">
+          <motion.p variants={itemVariants} className="text-parchment-warm/90 text-sm sm:text-lg sm:leading-relaxed font-normal max-w-2xl">
             {language === 'en'
               ? 'Explore local traditions, meet talented artists and experience the cultural richness of Thrissur.'
               : 'തനത് പാരമ്പര്യ കലകളെ അറിയാം, പ്രതിഭാധനരായ കലാകാരന്മാരെ പരിചയപ്പെടാം, തൃശ്ശൂരിന്റെ സാംസ്കാരിക സമൃദ്ധി നേരിട്ടനുഭവിക്കാം.'}
           </motion.p>
 
           {/* Interactive Search Bar: Exact Copy Requested */}
-          <motion.div variants={itemVariants} className="pt-2 max-w-2xl relative">
-            <form onSubmit={handleSearchSubmit} className="relative flex items-center">
+          <motion.div variants={itemVariants} className="pt-2 max-w-2xl relative w-full">
+            <form onSubmit={handleSearchSubmit} className="relative flex items-center w-full">
               <div className="relative w-full">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-warm-sand" />
+                <Search className="absolute left-3.5 sm:left-4 top-1/2 -translate-y-1/2 w-4 sm:w-5 h-4 sm:h-5 text-warm-sand" />
                 <input
                   type="text"
                   value={localSearch}
                   onChange={(e) => setLocalSearch(e.target.value)}
                   placeholder="Search artists, art forms, places and events..."
-                  className="w-full pl-12 pr-28 sm:pr-36 py-3.5 sm:py-4 rounded-2xl bg-white/95 backdrop-blur-md text-deep-brown placeholder-deep-brown/50 text-xs sm:text-sm font-medium border border-cream-gold shadow-cultural focus:outline-none focus:ring-2 focus:ring-cream-gold transition-all"
+                  className="w-full pl-10 sm:pl-12 pr-24 sm:pr-36 py-3 sm:py-4 rounded-2xl bg-white/95 backdrop-blur-md text-deep-brown placeholder-deep-brown/50 text-xs sm:text-sm font-medium border border-cream-gold shadow-cultural focus:outline-none focus:ring-2 focus:ring-cream-gold transition-all"
                 />
               </div>
 
@@ -150,7 +150,7 @@ export const Hero: React.FC = () => {
                 whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
                 whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
                 type="submit"
-                className="absolute right-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-traditional-red hover:bg-traditional-red-dark text-white text-xs sm:text-sm font-bold shadow-md transition-colors flex items-center space-x-1.5"
+                className="absolute right-1.5 sm:right-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-traditional-red hover:bg-traditional-red-dark text-white text-xs sm:text-sm font-bold shadow-md transition-colors flex items-center space-x-1.5"
               >
                 <span>Search</span>
                 <ArrowRight className="w-3.5 h-3.5 hidden sm:inline" />
@@ -192,12 +192,12 @@ export const Hero: React.FC = () => {
           </motion.div>
 
           {/* Action Buttons: "Explore Culture" & "Showcase Your Work" */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-4">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4 w-full">
             <motion.button
               whileHover={shouldReduceMotion ? {} : { scale: 1.03, y: -2 }}
               whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
               onClick={() => setActiveTab('discover')}
-              className="flex items-center space-x-2 px-6 sm:px-8 py-3.5 rounded-xl bg-cream-gold hover:bg-cream-gold-dark text-deep-brown font-bold text-xs sm:text-sm shadow-gold hover:shadow-lg transition-all"
+              className="flex items-center justify-center space-x-2 px-6 sm:px-8 py-3.5 rounded-xl bg-cream-gold hover:bg-cream-gold-dark text-deep-brown font-bold text-xs sm:text-sm shadow-gold hover:shadow-lg transition-all w-full sm:w-auto"
             >
               <Compass className="w-4 h-4 text-traditional-red" />
               <span>Explore Culture</span>
@@ -207,7 +207,7 @@ export const Hero: React.FC = () => {
               whileHover={shouldReduceMotion ? {} : { scale: 1.03, y: -2 }}
               whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
               onClick={() => setIsUploadModalOpen(true)}
-              className="flex items-center space-x-2 px-6 sm:px-8 py-3.5 rounded-xl bg-traditional-red hover:bg-traditional-red-dark text-white font-bold text-xs sm:text-sm border border-traditional-red-light shadow-md hover:shadow-lg transition-all"
+              className="flex items-center justify-center space-x-2 px-6 sm:px-8 py-3.5 rounded-xl bg-traditional-red hover:bg-traditional-red-dark text-white font-bold text-xs sm:text-sm border border-traditional-red-light shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
             >
               <PlusCircle className="w-4 h-4 text-cream-gold" />
               <span>Showcase Your Work</span>

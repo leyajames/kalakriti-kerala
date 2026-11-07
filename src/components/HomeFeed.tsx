@@ -538,8 +538,8 @@ export const HomeFeed: React.FC = () => {
         {/* Embedded Map Canvas Card */}
         <div className="rounded-3xl overflow-hidden border-2 border-cream-gold shadow-cultural bg-white grid grid-cols-1 lg:grid-cols-12">
           
-          {/* Map View (7 cols) */}
-          <div className="lg:col-span-7 h-[420px] relative z-0">
+          {/* Map View (7 cols) - Responsive Height */}
+          <div className="lg:col-span-7 h-[280px] sm:h-[350px] lg:h-[420px] relative z-0">
             <MapContainer
               center={[10.5244, 76.2144]}
               zoom={11}

@@ -77,15 +77,15 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div>
-              <div className="flex items-baseline space-x-2">
-                <span className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-deep-brown group-hover:text-traditional-red transition-colors">
+              <div className="flex items-baseline space-x-1.5 sm:space-x-2">
+                <span className="font-display text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-deep-brown group-hover:text-traditional-red transition-colors">
                   KALAKRITI
                 </span>
-                <span className="font-malayalam text-sm sm:text-base font-semibold text-terracotta hidden xs:inline">
+                <span className="font-malayalam text-xs sm:text-base font-semibold text-terracotta hidden xs:inline">
                   കലാകൃതി
                 </span>
               </div>
-              <p className="text-[10px] sm:text-xs tracking-wider uppercase text-olive-green font-medium -mt-0.5">
+              <p className="hidden xs:block text-[9px] sm:text-xs tracking-wider uppercase text-olive-green font-medium -mt-0.5 truncate max-w-[140px] sm:max-w-none">
                 {language === 'en' ? 'Discover. Preserve. Showcase.' : 'കണ്ടെത്തുക • സംരക്ഷിക്കുക • പ്രദർശിപ്പിക്കുക'}
               </p>
             </div>
@@ -179,11 +179,11 @@ export const Navbar: React.FC = () => {
               </button>
             )}
 
-            {/* Login / Sign Up Button */}
+            {/* Login / Sign Up Button (Desktop & Tablet) */}
             {user ? (
-              <div className="flex items-center space-x-2 bg-white/80 border border-warm-sand/40 px-2.5 py-1.5 rounded-xl text-xs">
-                <span className="w-2 h-2 rounded-full bg-olive-green" />
-                <span className="font-bold text-deep-brown truncate max-w-[80px] sm:max-w-[120px]">
+              <div className="flex items-center space-x-2 bg-white/80 border border-warm-sand/40 px-2 sm:px-2.5 py-1.5 rounded-xl text-xs">
+                <span className="w-2 h-2 rounded-full bg-olive-green shrink-0" />
+                <span className="font-bold text-deep-brown truncate max-w-[70px] sm:max-w-[120px]">
                   {user.name}
                 </span>
                 <button
@@ -197,7 +197,7 @@ export const Navbar: React.FC = () => {
             ) : (
               <button
                 onClick={() => setIsAuthModalOpen(true)}
-                className="flex items-center space-x-1 px-3 py-2 rounded-xl text-xs font-bold text-deep-brown hover:text-traditional-red hover:bg-parchment-dark/60 transition-all border border-warm-sand/40"
+                className="hidden sm:flex items-center space-x-1 px-3 py-2 rounded-xl text-xs font-bold text-deep-brown hover:text-traditional-red hover:bg-parchment-dark/60 transition-all border border-warm-sand/40"
               >
                 <User className="w-3.5 h-3.5 text-terracotta" />
                 <span>{language === 'en' ? 'Login / Sign Up' : 'ലോഗിൻ'}</span>
@@ -207,10 +207,13 @@ export const Navbar: React.FC = () => {
             {/* Prominent "Showcase Your Work" Button */}
             <button
               onClick={() => setIsUploadModalOpen(true)}
-              className="flex items-center space-x-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-traditional-red hover:bg-traditional-red-dark text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200 border border-traditional-red-light shrink-0"
+              className="flex items-center space-x-1 sm:space-x-1.5 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-traditional-red hover:bg-traditional-red-dark text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200 border border-traditional-red-light shrink-0"
             >
               <PlusCircle className="w-4 h-4 text-cream-gold shrink-0" />
-              <span className="whitespace-nowrap">{language === 'en' ? 'Showcase Your Work' : 'സൃഷ്ടികൾ പങ്കിടുക'}</span>
+              <span className="whitespace-nowrap">
+                <span className="hidden sm:inline">{language === 'en' ? 'Showcase Your Work' : 'സൃഷ്ടികൾ പങ്കിടുക'}</span>
+                <span className="sm:hidden">{language === 'en' ? 'Showcase' : 'പങ്കുവെക്കുക'}</span>
+              </span>
             </button>
 
             {/* Mobile Menu Hamburger */}

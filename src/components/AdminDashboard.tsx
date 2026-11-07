@@ -965,7 +965,7 @@ export const AdminDashboard: React.FC = () => {
               </div>
 
               {/* Actions Toolbar */}
-              <div className="flex flex-wrap items-center justify-end gap-3 pt-4 border-t border-warm-sand/30">
+              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3 pt-4 border-t border-warm-sand/30">
                 <button
                   onClick={() => setInspectItem(null)}
                   className="px-4 py-2 rounded-xl text-xs font-semibold text-deep-brown hover:bg-parchment"
@@ -977,7 +977,7 @@ export const AdminDashboard: React.FC = () => {
                     setChangesItem(inspectItem);
                     setCorrectionNotes(PRESET_CORRECTION_NOTES[0]);
                   }}
-                  className="px-4 py-2 rounded-xl bg-terracotta/20 hover:bg-terracotta/30 text-terracotta text-xs font-bold border border-terracotta/40"
+                  className="px-3.5 sm:px-4 py-2 rounded-xl bg-terracotta/20 hover:bg-terracotta/30 text-terracotta text-xs font-bold border border-terracotta/40"
                 >
                   Request Changes
                 </button>
@@ -986,13 +986,13 @@ export const AdminDashboard: React.FC = () => {
                     setRejectingItem(inspectItem);
                     setRejectReason(PRESET_REJECTION_REASONS[0]);
                   }}
-                  className="px-4 py-2 rounded-xl border border-traditional-red text-traditional-red hover:bg-traditional-red/10 text-xs font-bold"
+                  className="px-3.5 sm:px-4 py-2 rounded-xl border border-traditional-red text-traditional-red hover:bg-traditional-red/10 text-xs font-bold"
                 >
                   Reject
                 </button>
                 <button
                   onClick={() => handleApprove(inspectItem)}
-                  className="px-6 py-2 rounded-xl bg-olive-green hover:bg-olive-green/90 text-white text-xs font-bold shadow-md"
+                  className="px-4 sm:px-6 py-2 rounded-xl bg-olive-green hover:bg-olive-green/90 text-white text-xs font-bold shadow-md"
                 >
                   Approve & Publish Live
                 </button>
@@ -1007,12 +1007,12 @@ export const AdminDashboard: React.FC = () => {
       {/* ==================================================================== */}
       <AnimatePresence>
         {rejectingItem && (
-          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-4 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-warm-sand/40 space-y-5"
+              className="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-8 shadow-2xl border border-warm-sand/40 space-y-5 my-auto my-4 sm:my-6 max-h-[90vh] overflow-y-auto"
             >
               <div className="flex items-center space-x-3 text-traditional-red">
                 <div className="w-10 h-10 rounded-full bg-traditional-red/10 flex items-center justify-center">
@@ -1078,12 +1078,12 @@ export const AdminDashboard: React.FC = () => {
       {/* ==================================================================== */}
       <AnimatePresence>
         {changesItem && (
-          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-4 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-warm-sand/40 space-y-5"
+              className="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-8 shadow-2xl border border-warm-sand/40 space-y-5 my-auto my-4 sm:my-6 max-h-[90vh] overflow-y-auto"
             >
               <div className="flex items-center space-x-3 text-terracotta">
                 <div className="w-10 h-10 rounded-full bg-terracotta/10 flex items-center justify-center">
@@ -1148,12 +1148,12 @@ export const AdminDashboard: React.FC = () => {
       {/* ==================================================================== */}
       <AnimatePresence>
         {editingItem && (
-          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-4 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-warm-sand/40 space-y-5 max-h-[90vh] overflow-y-auto"
+              className="bg-white rounded-3xl max-w-xl w-full p-5 sm:p-8 shadow-2xl border border-warm-sand/40 space-y-5 my-auto my-4 sm:my-6 max-h-[90vh] overflow-y-auto"
             >
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-full bg-deep-brown/10 flex items-center justify-center text-deep-brown">
@@ -1241,12 +1241,12 @@ export const AdminDashboard: React.FC = () => {
       {/* ==================================================================== */}
       <AnimatePresence>
         {deleteConfirmItem && (
-          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-4 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white rounded-3xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl border border-warm-sand/40"
+              className="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 text-center space-y-4 shadow-2xl border border-warm-sand/40 my-auto my-4 sm:my-6"
             >
               <div className="w-12 h-12 rounded-full bg-traditional-red/10 flex items-center justify-center mx-auto text-traditional-red">
                 <Trash2 className="w-6 h-6" />

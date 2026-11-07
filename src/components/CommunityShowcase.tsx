@@ -356,17 +356,17 @@ export const CommunityShowcase: React.FC = () => {
             role="dialog"
             aria-modal="true"
             aria-labelledby="lightbox-creation-title"
-            className="fixed inset-0 z-70 bg-deep-brown/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 select-none"
+            className="fixed inset-0 z-70 bg-deep-brown/95 backdrop-blur-md flex items-start sm:items-center justify-center p-3 sm:p-6 select-none overflow-y-auto"
           >
             <motion.div 
               initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.94 }}
               transition={{ duration: 0.25 }}
-              className="relative w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6"
+              className="relative w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto my-3 sm:my-6"
             >
               
-              <div className="relative h-80 sm:h-[450px] bg-deep-brown overflow-hidden">
+              <div className="relative h-52 sm:h-80 md:h-[450px] bg-deep-brown overflow-hidden">
                 <img
                   src={activeLightboxCreation.image}
                   alt={activeLightboxCreation.titleEn}
@@ -377,7 +377,7 @@ export const CommunityShowcase: React.FC = () => {
                 <button
                   onClick={() => setActiveLightboxCreation(null)}
                   aria-label="Close enlarged view"
-                  className="absolute top-4 right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10"
+                  className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10 shadow-md"
                 >
                   <X className="w-5 h-5" />
                 </button>

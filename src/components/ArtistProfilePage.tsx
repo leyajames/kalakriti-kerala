@@ -487,11 +487,11 @@ export const ArtistProfilePage: React.FC = () => {
           role="dialog"
           aria-modal="true"
           aria-labelledby="artwork-modal-title"
-          className="fixed inset-0 z-70 bg-deep-brown/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn"
+          className="fixed inset-0 z-70 bg-deep-brown/90 backdrop-blur-md flex items-start sm:items-center justify-center p-3 sm:p-6 animate-fadeIn overflow-y-auto"
         >
-          <div className="relative w-full max-w-3xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6">
+          <div className="relative w-full max-w-3xl bg-white rounded-3xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto my-3 sm:my-6">
             
-            <div className="relative h-72 sm:h-96 bg-deep-brown">
+            <div className="relative h-52 sm:h-72 md:h-96 bg-deep-brown">
               <img
                 src={activeArtworkModal.images[0]}
                 alt={activeArtworkModal.titleEn}
@@ -502,16 +502,16 @@ export const ArtistProfilePage: React.FC = () => {
               <button
                 onClick={() => setActiveArtworkModal(null)}
                 aria-label="Close artwork details"
-                className="absolute top-4 right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors shadow-md z-10"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors shadow-md z-10"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="absolute bottom-4 left-6 right-6 text-white space-y-1">
-                <span className="px-2.5 py-0.5 rounded-full bg-cream-gold text-deep-brown text-xs font-bold">
+              <div className="absolute bottom-3 left-4 right-4 sm:bottom-4 sm:left-6 sm:right-6 text-white space-y-1">
+                <span className="px-2.5 py-0.5 rounded-full bg-cream-gold text-deep-brown text-[10px] sm:text-xs font-bold">
                   {activeArtworkModal.category || activeArtworkModal.artformName}
                 </span>
-                <h3 id="artwork-modal-title" className="font-display text-2xl font-bold">
+                <h3 id="artwork-modal-title" className="font-display text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
                   {language === 'en' ? activeArtworkModal.titleEn : activeArtworkModal.titleMl}
                 </h3>
               </div>

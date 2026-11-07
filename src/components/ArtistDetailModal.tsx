@@ -239,16 +239,16 @@ export const ArtistDetailModal: React.FC = () => {
 
       {/* Individual Artwork Lightbox & Craft Story Drawer */}
       {activeArtwork && (
-        <div className="fixed inset-0 z-60 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-fadeIn">
-          <div className="relative max-w-3xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl border border-cream-gold">
+        <div className="fixed inset-0 z-60 bg-black/90 backdrop-blur-md flex items-start sm:items-center justify-center p-3 sm:p-4 animate-fadeIn overflow-y-auto">
+          <div className="relative max-w-3xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl border border-cream-gold my-auto my-3 sm:my-6">
             <button
               onClick={() => setActiveArtwork(null)}
-              className="absolute top-3 right-3 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10"
+              className="absolute top-3 right-3 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10 shadow-md"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="h-80 sm:h-96 w-full bg-black">
+            <div className="h-56 sm:h-80 md:h-96 w-full bg-black">
               <img
                 src={activeArtwork.images[0]}
                 alt={activeArtwork.titleEn}

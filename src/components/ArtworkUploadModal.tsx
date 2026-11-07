@@ -252,20 +252,20 @@ export const ArtworkUploadModal: React.FC = () => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="upload-modal-title"
-      className="fixed inset-0 z-60 overflow-y-auto bg-deep-brown/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-fadeIn select-none"
+      className="fixed inset-0 z-60 overflow-y-auto bg-deep-brown/85 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-6 animate-fadeIn select-none"
     >
-      <div className="relative w-full max-w-4xl bg-white rounded-2xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6">
+      <div className="relative w-full max-w-4xl bg-white rounded-2xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto my-3 sm:my-6">
         
         {/* Top Heritage Gold Bar */}
         <div className="h-2 bg-gradient-to-r from-traditional-red via-cream-gold to-terracotta" />
 
         {/* Modal Header */}
-        <div className="p-6 bg-parchment-warm border-b border-warm-sand/30 flex items-center justify-between">
+        <div className="p-4 sm:p-6 bg-parchment-warm border-b border-warm-sand/30 flex items-center justify-between">
           <div>
-            <span className="text-terracotta font-heading tracking-wider uppercase text-[11px] font-bold">
+            <span className="text-terracotta font-heading tracking-wider uppercase text-[10px] sm:text-[11px] font-bold">
               {language === 'en' ? 'Artisan Onboarding & Digital Atelier' : 'കലാകാരൻ രജിസ്ട്രേഷൻ'}
             </span>
-            <h3 id="upload-modal-title" className="font-display text-2xl sm:text-3xl font-bold text-deep-brown">
+            <h3 id="upload-modal-title" className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-deep-brown">
               {language === 'en' ? 'Register & Showcase Cultural Work' : 'കലാകാരനായി ചേർന്ന് സൃഷ്ടികൾ പ്രദർശിപ്പിക്കാം'}
             </h3>
           </div>
@@ -273,35 +273,35 @@ export const ArtworkUploadModal: React.FC = () => {
           <button
             onClick={() => setIsUploadModalOpen(false)}
             aria-label="Close modal"
-            className="p-2 rounded-full hover:bg-white text-deep-brown/60 hover:text-traditional-red transition-colors"
+            className="p-1.5 sm:p-2 rounded-full hover:bg-white text-deep-brown/60 hover:text-traditional-red transition-colors shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Mode Selector Tabs */}
-        <div className="px-6 pt-4 flex items-center justify-between border-b border-warm-sand/30 bg-white">
-          <div className="flex space-x-2">
+        <div className="px-4 sm:px-6 pt-3 sm:pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-warm-sand/30 bg-white">
+          <div className="flex space-x-1 sm:space-x-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
             <button
               onClick={() => setMode('REGISTER_ARTIST')}
-              className={`pb-3 px-4 text-xs font-bold transition-all border-b-2 ${
+              className={`pb-2.5 sm:pb-3 px-3 sm:px-4 text-xs font-bold transition-all border-b-2 whitespace-nowrap ${
                 mode === 'REGISTER_ARTIST'
                   ? 'border-traditional-red text-traditional-red'
                   : 'border-transparent text-deep-brown/60 hover:text-deep-brown'
               }`}
             >
-              1. Register as Artist / Craftsperson
+              1. Register as Artist
             </button>
 
             <button
               onClick={() => setMode('ADD_ARTWORK')}
-              className={`pb-3 px-4 text-xs font-bold transition-all border-b-2 ${
+              className={`pb-2.5 sm:pb-3 px-3 sm:px-4 text-xs font-bold transition-all border-b-2 whitespace-nowrap ${
                 mode === 'ADD_ARTWORK'
                   ? 'border-traditional-red text-traditional-red'
                   : 'border-transparent text-deep-brown/60 hover:text-deep-brown'
               }`}
             >
-              2. Upload Artwork to Showcase
+              2. Upload Artwork
             </button>
           </div>
 
@@ -310,7 +310,7 @@ export const ArtworkUploadModal: React.FC = () => {
               setIsUploadModalOpen(false);
               setActiveTab('artist-dashboard');
             }}
-            className="pb-3 text-xs font-bold text-olive-green hover:underline flex items-center space-x-1"
+            className="pb-2 sm:pb-3 text-xs font-bold text-olive-green hover:underline flex items-center space-x-1 self-end sm:self-auto shrink-0"
           >
             <span>Open Artist Dashboard</span>
             <ArrowRight className="w-3.5 h-3.5" />

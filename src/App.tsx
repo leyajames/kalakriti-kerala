@@ -80,7 +80,7 @@ export const AppContent: React.FC = () => {
       <Navbar />
 
       {/* Main Dynamic Viewport with Smooth Page Transitions */}
-      <main className="flex-1 overflow-x-hidden">
+      <main className="flex-1 overflow-x-hidden pb-16 lg:pb-0 w-full max-w-full">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -104,8 +104,8 @@ export const AppContent: React.FC = () => {
       {/* Cultural Footer */}
       <Footer />
 
-      {/* Mobile Sticky Bottom Navigation Bar (< 768px) */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-warm-sand/40 py-2 px-3 shadow-lg flex items-center justify-around">
+      {/* Mobile Sticky Bottom Navigation Bar (< 1024px) */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-warm-sand/40 py-2 px-3 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-lg flex items-center justify-around">
         <button
           onClick={() => setActiveTab('home')}
           className={`flex flex-col items-center py-1 px-2 text-[10px] font-semibold transition-colors ${

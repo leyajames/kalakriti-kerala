@@ -389,8 +389,8 @@ export const InteractiveMap: React.FC = () => {
         {viewMode === 'MAP' && (
           <div className="relative rounded-3xl overflow-hidden border-2 border-cream-gold shadow-cultural bg-white">
             
-            {/* Map Container */}
-            <div className="h-[620px] w-full z-0">
+            {/* Map Container - Responsive Viewport */}
+            <div className="h-[380px] sm:h-[480px] lg:h-[620px] w-full z-0">
               <MapContainer
                 center={defaultCenter}
                 zoom={11}
@@ -413,11 +413,11 @@ export const InteractiveMap: React.FC = () => {
                     icon={createCategoryIcon(item.culturalCategory)}
                   >
                     {/* Marker Preview Card on Click */}
-                    <Popup className="custom-cultural-preview-popup" minWidth={280} maxWidth={320}>
+                    <Popup className="custom-cultural-preview-popup" minWidth={240} maxWidth={280}>
                       <div className="p-1 space-y-2.5">
                         
                         {/* Image Preview */}
-                        <div className="relative h-32 w-full rounded-xl overflow-hidden bg-deep-brown">
+                        <div className="relative h-28 sm:h-32 w-full rounded-xl overflow-hidden bg-deep-brown">
                           <img
                             src={item.image}
                             alt={item.titleEn}
@@ -644,11 +644,11 @@ export const InteractiveMap: React.FC = () => {
           COMPLETE DETAILS MODAL
          ======================================================== */}
       {activeModalLocation && (
-        <div className="fixed inset-0 z-60 overflow-y-auto bg-deep-brown/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-fadeIn">
-          <div className="relative w-full max-w-3xl bg-white rounded-2xl overflow-hidden shadow-cultural border-2 border-cream-gold my-6">
+        <div className="fixed inset-0 z-60 overflow-y-auto bg-deep-brown/85 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-6 animate-fadeIn">
+          <div className="relative w-full max-w-3xl bg-white rounded-2xl overflow-hidden shadow-cultural border-2 border-cream-gold my-auto my-3 sm:my-6">
             
             {/* Modal Image Header */}
-            <div className="relative h-64 sm:h-80 bg-deep-brown">
+            <div className="relative h-48 sm:h-64 md:h-80 bg-deep-brown">
               <img
                 src={activeModalLocation.image}
                 alt={activeModalLocation.titleEn}
@@ -658,34 +658,34 @@ export const InteractiveMap: React.FC = () => {
 
               <button
                 onClick={() => setActiveModalLocation(null)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10 shadow-md"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-deep-brown/80 text-cream-gold hover:bg-traditional-red transition-colors z-10 shadow-md"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="absolute bottom-4 left-6 right-6 text-white space-y-1.5">
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-cream-gold text-deep-brown text-xs font-bold">
+              <div className="absolute bottom-3 left-4 right-4 sm:bottom-4 sm:left-6 sm:right-6 text-white space-y-1.5">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-cream-gold text-deep-brown text-[10px] sm:text-xs font-bold">
                     {activeModalLocation.categoryLabelEn}
                   </span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-semibold">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-[10px] sm:text-xs font-semibold">
                     {activeModalLocation.experienceTypeLabelEn}
                   </span>
                 </div>
 
-                <h2 className="font-display text-2xl sm:text-3xl font-bold leading-tight">
+                <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
                   {language === 'en' ? activeModalLocation.titleEn : activeModalLocation.titleMl}
                 </h2>
                 
-                <p className="text-xs text-cream-gold font-medium flex items-center space-x-1.5">
-                  <MapPin className="w-3.5 h-3.5" />
-                  <span>{activeModalLocation.address}</span>
+                <p className="text-[11px] sm:text-xs text-cream-gold font-medium flex items-center space-x-1.5">
+                  <MapPin className="w-3.5 h-3.5 shrink-0" />
+                  <span className="truncate">{activeModalLocation.address}</span>
                 </p>
               </div>
             </div>
 
             {/* Modal Scrollable Body */}
-            <div className="p-6 sm:p-8 space-y-6 max-h-[60vh] overflow-y-auto text-xs sm:text-sm text-deep-brown/85 leading-relaxed">
+            <div className="p-4 sm:p-8 space-y-5 sm:space-y-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto text-xs sm:text-sm text-deep-brown/85 leading-relaxed">
               
               {/* Detailed Descriptions */}
               <div className="space-y-2">

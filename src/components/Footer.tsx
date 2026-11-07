@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
   const [policyType, setPolicyType] = useState<'PRIVACY' | 'TERMS' | null>(null);
 
   return (
-    <footer className="bg-deep-brown text-parchment-warm border-t border-cream-gold/40 relative overflow-hidden">
+    <footer className="bg-deep-brown text-parchment-warm border-t border-cream-gold/40 relative overflow-hidden pb-16 lg:pb-0">
       
       {/* Top Gold Gradient Trim */}
       <div className="h-1 bg-gradient-to-r from-traditional-red via-cream-gold to-terracotta" />
@@ -184,12 +184,12 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright, Terms & Privacy */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-parchment-warm/70 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-parchment-warm/70 gap-4 text-center sm:text-left">
           <p>
             © {new Date().getFullYear()} KALAKRITI (കലാരീതി) – Discover. Preserve. Showcase. All traditional cultural documentation preserved under Creative Commons (CC BY-NC 4.0).
           </p>
 
-          <div className="flex items-center space-x-4 text-xs">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 text-xs shrink-0">
             <button 
               onClick={() => setPolicyType('PRIVACY')} 
               className="hover:text-cream-gold transition-colors underline"
@@ -217,8 +217,8 @@ export const Footer: React.FC = () => {
 
       {/* Privacy Policy & Terms Modal */}
       {policyType && (
-        <div className="fixed inset-0 z-60 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn text-deep-brown">
-          <div className="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 border border-cream-gold shadow-2xl">
+        <div className="fixed inset-0 z-60 bg-black/80 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-4 animate-fadeIn text-deep-brown overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-lg w-full p-5 sm:p-6 space-y-4 border border-cream-gold shadow-2xl my-auto my-3 sm:my-6">
             <div className="flex items-center justify-between border-b border-warm-sand/30 pb-3">
               <h3 className="font-display text-lg font-bold">
                 {policyType === 'PRIVACY' ? 'Privacy & Data Protection' : 'Terms of Cultural Service'}
