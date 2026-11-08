@@ -509,13 +509,13 @@ For hackathon judges, a one-click **Demo Admin Login** is available directly in 
 
 | Name | Role | Contribution |
 |---|---|---|
-| `[Team Member 1 — Name]` | `[Role, e.g. Full-Stack Developer]` | `[e.g. Core architecture, Supabase integration, ArtformCatalog, InteractiveMap]` |
-| `[Team Member 2 — Name]` | `[Role, e.g. Frontend Developer & UI Designer]` | `[e.g. Design system, Tailwind theme, ArtistDirectory, ArtistDashboard, Framer Motion animations]` |
-| `[Team Member 3 — Name]` | `[Role, e.g. Backend Developer & DB Architect]` | `[e.g. Supabase schema, RLS policies, seed data, storage pipeline, AdminDashboard]` |
-| `[Team Member 4 — Name]` | `[Role, e.g. Cultural Researcher & Content Lead]` | `[e.g. Artform taxonomy, bilingual content (Malayalam translations), cultural accuracy review]` |
+| `[Team Member 1 — LEYA JAMES ]` | `[Role, e.g. Full-Stack Developer]` | `[e.g. Core architecture, Supabase integration, ArtformCatalog, InteractiveMap]` |
+| `[Team Member 2 — HRISHIKESH TM]` | `[Role, e.g. Frontend Developer & UI Designer]` | `[e.g. Design system, Tailwind theme, ArtistDirectory, ArtistDashboard, Framer Motion animations]` |
+| `[ LEYA JAMES ]` | `[Role, e.g. Backend Developer & DB Architect]` | `[e.g. Supabase schema, RLS policies, seed data, storage pipeline, AdminDashboard]` |
+| `[ HRISHIKESH TM]` | `[Role, e.g. Cultural Researcher & Content Lead]` | `[e.g. Artform taxonomy, bilingual content (Malayalam translations), cultural accuracy review]` |
 
-**Institution / College:** `[Your institution name]`
-**Team Name:** `[Your team name, if applicable]`
+**Institution / College:** `[CHRIST COLLEGE OF ENGINEERING ,IRIJALAKUDA]`
+**Team Name:** `[TEAM : VARNIKA]`
 **Hackathon:** ART/CODE 2026
 
 ---
